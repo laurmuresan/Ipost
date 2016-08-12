@@ -1,0 +1,147 @@
+
+
+.layouts-options-section{
+  display: flex;
+  flex: 1 auto;
+  flex-flow: column;
+  height: 100%;
+  margin: $gap;
+  min-height: 0;
+  border: 0.1rem solid $form-border-color;
+
+  .title-area{
+    @extend %title-area;
+  }
+}
+
+.layout-options-list-wrapper{
+  align-items: center;
+  background: #fff;
+  border: 0.1rem solid $form-border-color;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 0;
+  margin: $gap;
+  padding: $gap;
+}
+
+.layout-options-list{
+  align-self: center;
+  list-style: none;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+
+  li{
+    color: #505659;
+    display: inline-block;
+    margin: 0.5rem;
+
+    .templateItemTxt{
+      border-top: 1px solid #e6e6e6;
+      position: relative;
+      text-align: center;
+      color: #858a8d;
+      font-size: 1.4rem;
+      line-height: 4rem;
+
+      &:before{
+        background-color: #eeeeee;
+        content: "";
+        display: inline-block;
+        height: 0.1rem;
+        left: -24px;
+        position: absolute;
+        top: -0.1rem;
+        width: 16.5rem;
+      }
+    }
+
+    .layout-option-name-beefree{
+      box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0);
+      border: 0.1rem solid $form-border-color;
+      cursor: pointer;
+      color: $base-color;
+      display: inline-block;
+      font-family: 'Raleway', Helvetica, Arial, sans-serif;
+      font-size: 1.2rem;
+      height: 21rem;
+      line-height: 1.5;
+      overflow: hidden;
+      transition: box-shadow $time, border-color $time, color $time;
+      width: 17rem;
+      padding: 2.5rem 2.5rem 0;
+
+      &-text{
+        display: inline-block;
+        max-height: 3.4rem;
+        margin: 0.5rem .5rem 0 .5rem;
+        overflow: hidden;
+      }
+
+      &:hover,  &.active{
+        box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.35);
+        color: $primary_color;
+      }
+
+      &:before{
+        @extend #icon;
+        font-size: 3.5rem;
+        display: block;
+        line-height: 4rem;
+        padding: 2.5rem 0 0;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .layout-option-name{
+      box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0);
+      border: 0.1rem solid $form-border-color;
+      cursor: pointer;
+      color: $base-color;
+      display: inline-block;
+      font-family: 'Raleway', Helvetica, Arial, sans-serif;
+      font-size: 1.2rem;
+      height: 12rem;
+      line-height: 1.5;
+      overflow: hidden;
+      text-transform: uppercase;
+      transition: box-shadow $time, border-color $time, color $time;
+      width: 12rem;
+
+      &-text{
+        display: inline-block;
+        max-height: 3.4rem;
+        margin: 0.5rem .5rem 0 .5rem;
+        overflow: hidden;
+      }
+
+      &:hover,  &.active{
+        box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.35);
+        color: $primary_color;
+      }
+
+      &:before{
+        @extend #icon;
+        font-size: 3.5rem;
+        display: block;
+        line-height: 4rem;
+        padding: 2.5rem 0 0;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

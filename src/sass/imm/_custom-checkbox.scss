@@ -1,0 +1,15 @@
+.custom-checkbox{
+  border:1px solid lighten($icons-blue, 20%);
+  border-radius:2px;
+  height: 15px;
+  width: 15px;
+  padding-left: 1px;
+  color: $icons-blue;
+  font-size: 10px;
+  background-color: lighten($icons-blue, 45%)
+}
+.offset-custom-checkbox-content{
+  position:relative;
+  left:1px;
+  top:1px;
+}

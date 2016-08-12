@@ -1,0 +1,719 @@
+.custom-tabs {
+  padding: 2rem;
+  .tabs-nav {
+    li{
+      border-top: 0.1rem solid #c8c7cc;
+      .tab-title{
+        color: #666666;
+      }
+    }
+    li:nth-child(1){
+      border-left: 0.1rem solid #c8c7cc;
+    }
+    li:last-child{
+      border-right: 0.1rem solid #c8c7cc;
+    }
+  }
+  .reports-wrapper {
+    flex: 1;
+    border-left: 0.1rem solid #c8c7cc;
+    border-right: 0.1rem solid #c8c7cc;
+    border-bottom: 0.1rem solid #c8c7cc;
+    padding-top: 1.5rem;
+    .generic-table{
+
+      &.links-tab-table{
+        th:first-child{
+          width: 5rem;
+        }
+        th:nth-child(2){
+          width: 17rem;
+        }
+        td {
+          line-height: 2.3;
+          div {
+            display: flex;
+            input {
+
+              @media (min-width: $xs){
+                flex: 1 auto;
+              }
+
+              @media (min-width: $s){
+                flex: 1 auto;
+              }
+
+              @media (min-width: $m){
+                flex: none;
+                width:50rem;
+              }
+
+              @media (min-width: $l){
+                flex: none;
+                width: 50rem;
+              }
+
+              @media (min-width: $xl){
+                flex: none;
+                width: 50rem;
+              }
+
+            }
+          }
+      }
+        tr:first-child{
+          td{
+            background-color: #fff;
+          }
+        }
+    }
+    }
+    input[type="text"] {
+      width: 30rem;
+    }
+    input{
+      margin: 0 7px 0;
+    }
+    .Select-control{
+      margin: 0 7px 0;
+      width: 10rem;
+    }
+    .btn-wrappers.right-side.btn-toolbar {
+      display: inline-flex;
+      float: right;
+    }
+    .Select-menu-outer{
+      left: 0.7rem;
+    }
+    .empty-links-table{
+      border: 0.1rem solid #c8c7cc;
+      line-height: 3.6rem;
+      padding-left: 0.7rem;
+    }
+
+    .delivery-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .entry {
+      margin-top: 4rem;
+
+      .title {
+        color: $primary_color;
+        font-weight: bold;
+      }
+
+      .generic-table {
+        border-collapse: separate;
+
+        tr:first-child td {
+          background-color: #fff;
+          border-top: 0.1rem solid #c8c7cc;
+        }
+
+        tr:last-child {
+          td {
+            background-color: #e2e2e2;
+          }
+          td:first-child {
+            font-weight: bold;
+          }
+        }
+
+        th:first-child {
+          width: 20%;
+        }
+
+        td, th {
+          text-align: center;
+
+          &:first-child {
+            text-align: left;
+            padding-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .summary-charts{
+    width: 100%;
+
+    .row{
+      padding:2rem 0 0 0;
+
+      .chart{
+        padding: 0;
+
+        .card{
+          margin: 0;
+          border: 0.1rem solid #c8c7cc;
+
+          h3 {
+            color: #696666;
+          }
+        }
+      }
+
+      .chart:nth-child(1){
+        padding-right: 2rem;
+      }
+    }
+  }
+
+  .table-horizontal-wrapper{
+    padding: 0;
+  }
+}
+
+.tabs-nav{
+  display: flex;
+  list-style: none;
+  flex: 0 0 5rem;
+  flex-flow: row;
+  justify-content: center;
+  margin: 0;
+  height: 5rem;
+  padding: 0;
+  text-align: center;
+
+  .modal-body &{
+    border: 0.1rem solid $form-border-color;
+    border-bottom: 0;
+    margin-bottom: 1rem;
+  }
+
+  li{
+    align-items: stretch;
+    border-bottom: 0.1rem solid $form-border-color;
+    border-right: 0.1rem solid $form-border-color;
+    background: $tabs-bk;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
+    flex: 1 auto;
+    height: 100%;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+    transition: background $time/2, border-color $time/2, color $time/2;
+    text-align: center;
+    padding: 0;
+    width: 0;
+
+    span, a{
+      justify-content: center;
+      display: flex;
+      flex: 1 auto;
+      line-height: 1.5rem;
+    }
+
+    .tab-title-name{
+      align-self: center;
+      text-align: center;
+      &.left {
+        justify-content: flex-start;
+        text-align: left;
+        padding-left: 3rem;
+      }
+      &.right {
+        justify-content: flex-end;
+        text-align: right;
+        padding-right: 3rem;
+      }
+    }
+
+    &.active, &:hover, &.is-tab-selected{
+      border-bottom-color: transparent;
+      background: #fff;
+      color: $primary_color;
+    }
+
+    &[disabled], &:disabled{
+      border-bottom-color: $form-border-color;
+      background: $tabs-bk;
+      color: #b3b3b3;
+      cursor: not-allowed;
+
+      &.active, &:hover, &.is-tab-selected{
+        border-bottom-color: $form-border-color;
+        background: $tabs-bk;
+        color: #b3b3b3;
+      }
+
+    }
+
+    &:last-child{
+      border-right-color: transparent;
+    }
+
+    .tab-icon-custom {
+      justify-content: flex-end;
+
+      &.tab-icon-custom:before {
+        font-size: 1.8rem;
+        font-weight: bold !important;
+        display: flex;
+        align-items: center;
+        margin-right: 0.6rem;
+      }
+    }
+
+    .tab-title-name-custom{
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: flex-start;
+
+      span {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.tabs-content{
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+  min-height: 0;
+
+  &.height-custom{
+
+    .modal-body-content.tabs-nav-position &{
+      padding: 0;
+
+      .tab-content-body{
+        padding: 1rem 2rem;
+        min-width: 0;
+
+        .full-width {
+          min-width: 0;
+        }
+      }
+    }
+
+  }
+
+  .tab-content-wrapper{
+    display: flex;
+    flex: 1 auto;
+    margin-bottom: $gap;
+  }
+
+  .table-form{
+    margin: 0 0 $gap 0;
+
+    &.table-custom-form {
+      margin: 0;
+    }
+
+    &.table-form-width {
+      margin: 0;
+      width: 100%;
+
+      th {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .modal-body &{
+    margin: 0;
+    padding: 0;
+  }
+
+  &.height-custom {
+    height: 100vh;
+    flex: 1 1 auto;
+  }
+
+  .list-membership-item {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+
+    &:nth-child(1) {
+      margin-top: 1.5rem;
+    }
+
+    span {
+      color: #666;
+      display: block;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 0.5rem;
+    }
+
+    div {
+      min-width: 0;
+    }
+
+    a {
+      white-space: nowrap;
+    }
+  }
+
+}
+
+.tab-content-body{
+  flex: 1;
+  padding: 1rem 0 0 0;
+
+  hr {
+    border: none;
+    border-top: 0.1rem solid $form-border-color;
+    margin-bottom: 3rem;
+  }
+
+  .steps-modal &{
+    display: flex;
+  }
+
+  .sent-emails-indentation {
+      margin: 0.5rem 0 0 1rem;
+  }
+
+  &.hidden{
+    display: none;
+  }
+
+  h3{
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+
+    &.sub-title {
+      border: none;
+    }
+  }
+
+  &.two-cols{
+    @extend %clearfix;
+  }
+
+  .tab-content-body-cols-wrapper{
+    display: flex;
+    flex: 1 auto;
+  }
+
+  .tab-content-body-l-col{
+    display: flex;
+    flex: 1 auto;
+    padding-right: 1rem;
+    width: 0;
+
+    img{
+      max-width: 100%;
+    }
+  }
+  .tab-content-body-r-col{
+    display: flex;
+    flex: 1 auto;
+    padding-left: 1rem;
+    overflow: auto;
+    width: 0;
+
+    .img-wrapper{
+      width: 100%;
+
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+
+//VERTICAL TABS
+.tabs-vertical-wrapper{
+  display: flex;
+  flex-shrink: 0;
+  flex-flow: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  min-height: 5rem;
+
+  .content-layout &{
+  }
+
+  .content-layout-wrapper2 &{
+    & + .tabs-vertical-wrapper{
+      border-top: 0.1rem solid $form-border-color;
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+  }
+
+  .panels-split &, .content-l-body &{
+    flex: 1 auto;
+  }
+
+  h2{
+    background: #e3e3e3;
+    cursor: pointer;
+    color: #00000c;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    transition: background $time/2, color $time/2;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+
+    &:hover{
+
+      &:after{
+        transform: rotate(0deg);
+      }
+    }
+
+    &:after{
+      @extend %icon;
+      content: '\F234';
+      height: 3rem;
+      line-height: 3rem;
+      position: absolute;
+      right: 1rem;
+      transform: rotate(90deg);
+      transition: transform $time/2;
+      top: 0;
+    }
+
+    &:first-child{
+      margin-top: 0;
+    }
+
+  }
+
+  .tabs-vertical{
+    list-style: none;
+    margin: 0 0 0.5rem 0;
+    padding: 0 0 0 0;
+    width: 100%;
+
+    .content-layout-wrapper2 &{
+
+      .tab-vertical-header{
+        position: relative;
+      }
+    }
+
+    .tab-vertical-body{
+      margin: 0 0 1rem 0;
+    }
+
+    .imm-accordion-item{
+      color: $primary_color;
+      cursor: pointer;
+      padding: 0.2rem 1rem;
+
+      &:hover{
+      }
+    }
+
+    &.open{
+
+      h2{
+
+        .manage-permission-page &{
+          background: $primary_color;
+          color: #fff;
+        }
+
+
+        &:after{
+          @extend %icon;
+          transform: rotate(0deg);
+          position: absolute;
+          right: 1rem;
+        }
+      }
+
+    }
+
+    li{
+      margin: 0 0 0.5rem 1rem;
+    }
+
+    .selected{
+      background: $primary_color;
+      color: #fff;
+    }
+
+    > li{
+      margin: 0 0 0.5rem 0;
+      padding: 0;
+
+      > a{
+        background: $tabs-bk;
+        color: $base-color;
+        display: block;
+        padding: 0.5rem 1.5rem 0.5rem 1rem;
+        position: relative;
+        transition: color $time;
+
+        &:before{
+          @extend %icon;
+          content: '\F234';
+          display: inline-block;
+          position: absolute;
+          right: 1rem;
+          transform: rotate(0deg);
+          transition: transform $time, right $time;
+        }
+
+        &.open, &:hover{
+          color: $primary_color;
+          transform: rotate(180deg);
+
+          &:before{
+            right: 1.1rem;
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.tabs-horizontal-wrapper{
+  display: flex;
+  flex-flow: column;
+  flex: 1 auto;
+  padding: 2rem 2rem 0 2rem;
+  overflow: auto;
+
+  .content-layout-wrapper2 &{
+    padding: 0;
+  }
+
+  &.dynamic-list-custom {
+
+    .form-group {
+      display: inline-block;
+      max-width: 40rem;
+
+      >input {
+        padding-right: 3.6rem;
+      }
+    }
+
+    .tab-horizontal-header {
+      font-weight: bold;
+    }
+
+    .filter-header {
+      color: $primary_color;
+    }
+
+    .content-layout-r {
+
+      .content-layout-r-head {
+
+        h3 {
+          color: $primary_color;
+        }
+      }
+
+      h2 {
+        cursor: auto;
+
+        &:after {
+          content: '';
+        }
+      }
+    }
+
+    .content-layout-l {
+
+      button {
+        transition: background $time, color $time, border-color $time;
+      }
+    }
+  }
+}
+
+
+.tab-horizontal{
+  background: #fff;
+  border: 0.1rem solid $form-border-color;
+  border-radius: 0.3rem;
+  flex-shrink: 0;
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+  transition: max-height $time;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  h2{/*
+    background: #e3e3e3;
+    color: $base-color;
+    */
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .open{
+
+    h2{
+    }
+  }
+
+  .content-layout-wrapper2 &{
+    border: 0;
+    padding-left: 0;
+  }
+
+  .imm-accordion-item{
+    font-size: 1.3rem;
+  }
+
+  &.open{
+
+    .tab-horizontal-body{
+      max-height: none;
+      padding: 3rem 0 2rem;
+    }
+
+    .panels-description {
+      margin-bottom: 1rem;
+    }
+
+    > div > h2{
+      &:after{
+        content: '\F231';
+      }
+    }
+  }
+
+  .tab-horizontal-body{
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: padding $time;
+  }
+
+  table{
+    margin: 0;
+  }
+
+  h2{
+
+    &:after{
+      @extend %icon;
+      display: inline-block;
+      margin: 0 0 0 0.5rem;
+      content: '\F234';
+      vertical-align: sub;
+    }
+
+  }
+}

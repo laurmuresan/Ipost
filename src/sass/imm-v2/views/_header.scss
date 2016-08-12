@@ -1,0 +1,351 @@
+
+#mainHeader{
+  align-self: stretch;
+  align-items: center;
+  background: $headerMain_bk;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  height: $headerHeight;
+  min-height: $headerHeight;
+
+  .client-name{
+    color: $grey_color;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 1rem 0 1rem 3rem;
+    transition: font-size $time;
+
+    @include breakpoint(s){
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.top-menu{
+  color: #fff;
+	display: flex;
+	flex-flow: row;
+  font-size: 1.2rem;
+
+  .top-menu-body{
+    display: flex;
+  }
+
+  .top-menu-option{
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 3.5rem 2rem 0 2rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: background $time;
+    z-index: 6;
+
+    @include breakpoint(s){
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .top-menu-title{
+      display: block;
+      text-align: center;
+      white-space: nowrap;
+
+      @include breakpoint(s){
+        font-size: 1rem;
+      }
+    }
+
+    &.settings{
+      &:before{
+        content: '\F217';
+      }
+    }
+
+    &:before{
+      @extend %icon;
+      content: '\F217';
+      color: $primary_color;
+      font-size: 1.5rem;
+      height: 3rem;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      transition: color $time;
+      top: 1rem;
+      width: 100%;
+    }
+
+    &:hover{
+      background: $headerOptionsHover-bk;
+    }
+
+    ul{
+      position: absolute;
+      right: 0;
+      text-transform: none;
+      z-index: 6;
+    }
+
+    &:hover{
+      .notice-list{
+        transition-delay: $time/2;
+        max-height: 50rem;
+        opacity: 1;
+        overflow: visible;
+      }
+    }
+
+    .notice-list{
+      background: #fff;
+      border-radius: 0.4rem;
+      border: 0.1rem solid $form-border-color;
+      font-size: 1.4rem;
+      list-style: none;
+      margin: 0;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      transition: opacity $time, max-height $time;
+      top: $headerHeight;
+      width: 26rem;
+
+
+
+      li{
+        border: 0.1rem solid $form-border-color;
+        border-radius: 0;
+        margin: 1rem;
+        transition: background $time;
+        padding: 1rem;
+
+        &:first-child{
+
+          &:before{
+            @extend %icon;
+            color: #fff;
+            content: '\F231';
+            font-size: 2.5rem;
+            position: absolute;
+            right: 4rem;
+            top: -2.4rem;
+            transition: color $time;
+          }
+
+          &:hover{
+
+            &:before{
+              color: $form-border-color;
+            }
+
+          }
+        }
+
+        &:last-child{
+          border-radius: 0;
+          border: 0;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+        }
+
+        &.view-all{
+          a{
+            color: $primary_color;
+            padding: 0 1.5rem 0.5rem 1.5rem;
+          }
+        }
+
+        &:hover{
+          background: $form-border-color;
+        }
+      }
+
+      a{
+        color: $base-color;
+        display: block;
+        line-height: 2;
+      }
+
+      .notice-list-title{
+        display: block;
+      }
+
+      .notice-list-info{
+        display: block;
+        font-size: 85%;
+        line-height: 1.6;
+      }
+    }
+
+  }
+
+  .settings{
+
+  }
+
+
+  .profile{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    flex: 1 auto;
+    height: 100%;
+    padding: 1rem 1rem;
+    position: relative;
+    transition: background $time;
+    z-index: 6;
+
+    &:hover{
+      background: $headerOptionsHover-bk;
+
+      .profile-details{
+
+        &:after{
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .avatar{
+      color: #fff;
+      margin: 0 1rem 0 0;
+
+      svg{
+        height: 3.9rem;
+       width: 3.9rem;
+      }
+    }
+
+    .profile-details{
+      padding: 0;
+      transition: font-size $time;
+
+      @include breakpoint(m){
+        font-size: 0.9em;
+      }
+
+      &:after{
+        @extend %icon;
+        content: '\F216';
+        color: $primary_color;
+        margin: 0 0 0 1rem;
+        transform: rotate(90deg);
+        transition: transform $time;
+      }
+    }
+
+    &:hover{
+
+      .profile-menu {
+        max-height: 20rem;
+        opacity: 1;
+
+      }
+    }
+
+    .profile-menu{
+      background: $headerOptionsHover-bk;
+      min-width: 13rem;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      transition: opacity $time, max-height $time;
+      top: $headerHeight;
+      width: 16rem;
+      z-index: 1;
+
+      li{
+        border-bottom: 0.1rem solid $headerSecondary_bk;
+        -webkit-transition: background 0.5s;
+        transition: background 0.5s;
+
+        &:hover {
+          background: $menu-link-bk-hover-color;
+        }
+
+        a{
+          color: #fff;
+          display: inline-block;
+          line-height: 2rem;
+          padding: 0.5rem 1rem;
+
+        }
+      }
+
+    }
+
+    img, svg{
+      line-height: 0;
+      font-size: 0;
+    }
+  }
+
+}
+
+.sidebar-right-toggle{
+  border-left: 0.1rem solid $headerSecondary_bk;
+  cursor: pointer;
+  height: $headerHeight;
+  line-height: $headerHeight;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  transition: background $time;
+  width: 3rem;
+
+  &:before{
+    @extend %icon;
+    content: '\F218';
+    color: $primary_color;
+    display: block;
+    font-size: 1.6rem;
+    left: 50%;
+    margin-left: -0.8rem;
+    opacity: 1;
+    position: absolute;
+    transition: left $time, margin-left $time, opacity $time;
+    top: 0;
+    width: 1.6rem;
+
+  }
+
+  &:after{
+    @extend %icon;
+    content: '\F219';
+    color: $primary_color;
+    display: block;
+    font-size: 1.6rem;
+    left: 0%;
+    margin-left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: left $time, margin-left $time, opacity $time;
+    width: 1.6rem;
+  }
+
+  &:hover, &.active{
+    background: $headerOptionsHover-bk;
+
+
+    &:before {
+      left: 0%;
+      margin-left: 0;
+      opacity: 0;
+    }
+
+    &:after{
+      left: 50%;
+      margin-left: -0.8rem;
+      opacity: 1;
+    }
+  }
+
+}

@@ -1,0 +1,181 @@
+
+#sidebar-right-side{
+  display: none;
+  background: $headerSecondary_bk;
+  color: $menu-link-color;
+  border-top: 0.1rem solid $menuBorder_color;
+  flex-flow: column;
+  height: calc(100% - 6.4rem);
+  min-height: 0;
+  position: absolute;
+  right: 0;
+  top: $headerHeight;
+  width: 26rem;
+  z-index: 15;
+
+
+
+  .tabs-section{
+    display: flex;
+    flex: 1 auto;
+    flex-flow: column;
+    min-height: 0;
+  }
+
+  &.app-offsidebar-open, &.show-right-navbar{
+    display: flex;
+  }
+
+
+}
+
+.tabs-section{
+}
+
+.nav-tabs{
+  background: $headerMain_bk;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li{
+    margin-right: 0.1rem;
+    transition: background $time;
+
+    a{
+      color: $menu-link-color;
+      display: inline-block;
+      line-height: 2rem;
+      padding: 1.5rem 2.5rem;
+    }
+
+    &.active, &:hover{
+      background: $headerSecondary_bk;
+    }
+  }
+}
+
+
+
+
+.tab-content{
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  list-style: none;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+
+  h3{
+    font-size: 1.2rem;
+    padding: 1.5rem 1.5rem;
+    text-transform: uppercase;
+  }
+
+  a{
+
+    color: $menu-link-color;
+  }
+
+  .tab-pane{
+    //display: none;
+    display: flex;
+    flex-flow: column;
+
+
+    &.active{
+      display: flex;
+      flex-flow: column;
+    }
+
+    .tab-pane-body{
+
+      overflow: auto;
+    }
+  }
+
+}
+
+.search-subclients{
+  background: $headerMain_bk;
+  padding: 1rem;
+
+  input{
+    background: rgba(255, 255, 255, 0);
+    border: 0;
+    border-radius: 0.5rem;
+    color: #fff;
+    display: inline-block;
+    transition: background $time, color $time;
+    width: 100%;
+
+    &:hover{
+      background: $menuBorder_color;
+    }
+
+    &:focus{
+      background: $menuBorder_color;
+    }
+  }
+}
+
+
+.users-list, .menu-list{
+
+  li{
+    border-bottom: 0.1rem solid $menuBorder_color;
+    font-size: 1.3rem;
+
+    a{
+      background: $headerSecondary_bk;
+      display: block;
+      line-height: 2rem;
+      padding: 1rem 2rem 1rem 4.5rem;
+      position: relative;
+      transition: background $time;
+
+      &:hover{
+        background: $menu-link-bk-hover-color;
+      }
+
+      &:before{
+        color: $menu-icon-link-color;
+        display: inline-block;
+        font-size: 1.4rem;
+        height: 2rem;
+        line-height: 2rem;
+        left: 1.5rem;
+        position: absolute;
+        top: 1rem;
+      }
+
+      &.subclient-item{
+        cursor: pointer;
+        position: relative;
+        padding-right: 5rem;
+
+        .icon-check-square{
+          height: 2rem;
+          line-height: 2rem;
+          position: absolute;
+          right: 2rem;
+          top: 50%;
+          margin-top: -1rem;
+        }
+      }
+    }
+
+    p{
+      background: $headerSecondary_bk;
+      display: block;
+      line-height: 2rem;
+      padding: $gap/3 $gap/2;
+      transition: background $time;
+
+    }
+  }
+}

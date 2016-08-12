@@ -1,0 +1,24 @@
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  /*
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+*/
+}
+
+body{
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+
+input, button, select, textarea{
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 3.6rem;
+
+  &.custom-class{
+    line-height: 3.2rem;
+  }
+}

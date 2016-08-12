@@ -1,0 +1,97 @@
+.element-list-container {
+  height: calc(100% - 125px);
+}
+
+.headers-and-footers-container {
+  height: 100%;
+
+  .headers-and-footers-list {
+    height: calc(100% - 90px);
+    overflow: auto;
+  }
+
+  .content-line-checkbox {
+    height: 3em;
+
+    span,
+    input {
+      position: absolute;
+    }
+
+    span {
+      left: 35px;
+    }
+
+    input {
+      top: 5px;
+    }
+  }
+
+  .content-line-actions {
+    > div {
+      float: right;
+      right: -15px;
+    }
+  }
+  
+  .folders-grid-breadcrumbs-select {
+    float: left;
+    padding-left: 10px;
+
+    span {
+      margin-left: 5px;
+      background-color: #fdfdfd;
+      padding: 0 4px;
+    }
+  }
+
+  .folders-grid-breadcrumbs-actions {
+    float: right;
+
+    button {
+      margin-right: 10px;
+      &.btn-danger {
+        margin-right: 20px;
+      }
+    }
+
+    .dropdown-menu {
+      right: 0;
+      left: initial;
+    }
+  }
+
+  .header-footer-name {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .dropdown-menu {
+    left: initial;
+    right: 0;
+  }
+
+  .pagination {
+    margin: 0;
+  }
+}
+
+.navigation-simple-line {
+  display: inline-block;
+  height: 40px;
+}
+.height-3em {
+  height: 3em;
+}
+
+.grid-file-details {
+  span {
+    text-transform: capitalize;
+  }
+}
+
+.loading-height.csspinner {
+  text-align: center;
+}

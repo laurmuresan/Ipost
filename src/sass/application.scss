@@ -1,0 +1,114 @@
+
+
+
+@import "compass";
+@import "vendor/bootstrap";
+@import "imm-v2/imm";
+
+/*
+
+@import "compass";
+
+// TODO: find a way to use these CSS dependencies as SASS files
+@import "../css/font-awesome.min";
+@import "../css/themify-icons";
+
+// Import Bootstrap
+@import "vendor/bootstrap";
+
+// Import GLOBAL VARIABLES ------------------
+@import "imm/variables";
+
+// TODO: investigate on removing unnecessary styles or plugins
+// Import ClipTwo admin theme styles ------------------
+@import "vendor/styles";
+
+// All custom SASS files are imported bellow
+// we should overwrite `Bootstrap` by extending its classes
+// and when extending such a class, we should make sure that
+// we use the same file name - it will be easier for debugging
+
+
+@import "node_modules/react-notifications/src/notifications";
+
+// VENDOR PLUGGINS ------------------
+@import "vendor/plugins"; // multiple imports
+
+@import "vendor/vendor/flexboxgrid.min";
+@import "vendor/react-select";
+// Import theme to be used used
+
+
+//@import "vendor/themes/theme-5"; // modified theme from client... see below
+@import "imm/vendor_custom/theme-5";
+@import "imm/vendor_custom/dropdowns";
+
+@import "imm/vendor_custom/nav";
+
+@import "imm/common";
+@import "imm/branding";
+@import "imm/global-left-navigation";
+@import "imm/container";
+@import "imm/navbar-avatar";
+@import "imm/system-notices.scss";
+@import "imm/navbar-right";
+@import "imm/navbar-right-hidden-menu";
+@import "imm/navbar-right-setting";
+@import "imm/page-header";
+@import "imm/page-header-breadcrumbs";
+@import "imm/widget-email";
+@import 'imm/folders-grid-breadcrumbs';
+@import "imm/create-email-navigation";
+@import "imm/loading-mask";
+@import "imm/text-email-properties";
+@import "imm/text-email-content";
+@import "imm/text-email-preview";
+@import "imm/new-folder-panel";
+@import "imm/html-email-preview";
+@import "imm/html-email-content";
+@import "imm/spellcheck";
+@import "imm/delete-folder-modal";
+@import "imm/custom-popups";
+@import "imm/template-email-layout";
+@import "imm/list-manager-folder-grid";
+@import "imm/spam-check-modal";
+@import "imm/list-manager-create";
+@import "imm/custom-checkbox";
+@import "imm/delivery_management";
+@import "imm/personalization-tags-modal";
+
+
+
+@import "imm/nav-bar";
+@import "imm/custom-to-be-removed";
+@import "imm/active-filters";
+@import "imm/icons";
+@import "imm/scrollbars";
+@import "imm/_mailing-tickets";
+@import "imm/tree-view";
+@import "imm/folders-grid";
+@import "imm/helper-classes";
+@import "imm/_headers-and-footers";
+@import "imm/_user-profile";
+@import "imm/_templates";
+@import "imm/_mobiles";
+@import "imm/_notices-notifications";
+@import "imm/_list-manager-create-popups";
+@import "imm/split-layout";
+@import "imm/slider";
+@import "imm/accordion";
+@import "imm/query";
+@import "imm/panes";
+@import "imm/checkbox";
+
+@import "imm/_data-tables";
+
+@import "imm/tree";
+@import "imm/_temporary_tree_design_fix";
+
+@import "imm/folder-section";
+@import "imm/_filepicker";
+@import "vendor/react-select";
+@import "imm/_assets-page";
+
+*/

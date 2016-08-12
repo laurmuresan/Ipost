@@ -1,0 +1,15 @@
+.subclients-table {
+  border-collapse: collapse;
+  width: 99%;
+  margin-left: 3px;
+
+  .row-highlight {
+    border: 2px solid #007AFF;
+  }
+
+  i {
+    font-size: 26px;
+    color: #337ab7;
+    margin-left: 25px;
+  }
+}

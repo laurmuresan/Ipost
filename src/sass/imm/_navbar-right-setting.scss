@@ -1,0 +1,40 @@
+.switch {
+  background: $white;
+  border: 1px solid $navbar-right-settings;
+  position: relative;
+  display: inline-block;
+  box-sizing: content-box;
+  overflow: visible;
+  width: 52px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: $navbar-right-settings 0 0 0 0 inset;
+  transition: .3s ease-out all;
+  -webkit-transition: .3s ease-out all;
+  top: -1px;
+
+  small {
+    background: $white;
+    border-radius: 100%;
+    box-shadow: 0 1px 3px $navbar-right-settings-shadow;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s ease-out all;
+    -webkit-transition: .3s ease-out all;
+  }
+
+  &.checked {
+    background: $navbar-right-settings-green-btn;
+    border-color: $navbar-right-settings-green-btn;
+
+    small {
+      left: 22px;
+    }
+  }
+}

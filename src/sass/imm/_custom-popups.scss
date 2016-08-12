@@ -1,0 +1,30 @@
+.custom-modal {
+  font-family: Raleway, sans-serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #5b5b60 !important;
+    font-family: Raleway, sans-serif !important;
+    font-weight: 300;
+    text-transform: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  & > div > div {
+    background-color: #ffffff !important;
+
+    & > div {
+      border-color: #e5e5e5;
+    }
+  }
+
+  .confirmation-modal-body-container {
+    text-align: center;
+    color: rgb(119, 119, 119);
+
+    i {
+      font-size: 40px;
+    }
+  }
+}
+

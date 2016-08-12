@@ -1,0 +1,202 @@
+
+
+.tree-list-simple{
+  font-size: 1.5rem;
+
+  > li{
+
+    &:before{
+      display: none;
+    }
+
+  }
+
+  li{
+    margin: 0;
+    position: relative;
+
+    &:before{
+      @extend %icon;
+      color: $icon-folder-color;
+      font-size: 1.4rem;
+      height: 1.4rem;
+      left: 0.5rem;
+      line-height: 1.4rem;
+      margin: 0;
+      position: absolute;
+      transition: opacity $time;
+      top: 0.6rem;
+    }
+
+    &:before{
+      content: '\F232';
+      opacity: 1;
+    }
+
+    .tree-list-simple-name{
+      cursor: pointer;
+      display: block;
+      line-height: 1.5;
+      padding: 0.3rem 0 0.3rem 3rem;
+      position: relative;
+      transition: background $time;
+
+      &:hover{
+        background: $row-hover-bk-color;
+      }
+
+      &:before, &:after{
+        @extend %icon;
+        color: $icon-folder-color;
+        font-size: 1.4rem;
+        height: 1.4rem;
+        left: 1rem;
+        line-height: 1.4rem;
+        margin: -0.6rem 0 0 0;
+        position: absolute;
+        transition: opacity $time;
+        top: 50%;
+      }
+
+      &:before{
+        content: '\F201';
+        opacity: 1;
+      }
+      &:after{
+        content: '\F202';
+        opacity: 0;
+      }
+    }
+
+    ul{
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height $time;
+    }
+
+    &.open{
+
+      > .tree-list-simple-name{
+
+        &:before{
+          opacity: 0;
+        }
+
+        &:after{
+          opacity: 1;
+        }
+      }
+
+      > ul{
+        max-height: 50rem;
+      }
+
+    }
+
+    li{
+
+      &:before{
+        left: 1rem;
+      }
+
+      .tree-list-simple-name{
+        padding-left: 5rem;
+
+        &:before, &:after{
+          left: 3rem;
+        }
+      }
+
+      li{
+
+        &:before{
+          left: 3rem;
+        }
+
+        .tree-list-simple-name{
+          padding-left: 7rem;
+
+          &:before, &:after{
+            left: 5rem;
+          }
+        }
+
+        li{
+
+          &:before{
+            left: 5rem;
+          }
+
+          .tree-list-simple-name{
+            padding-left: 9rem;
+
+            &:before, &:after{
+              left: 7rem;
+            }
+          }
+
+          li{
+
+            &:before{
+              left: 7rem;
+            }
+
+            .tree-list-simple-name{
+              padding-left: 11rem;
+
+              &:before, &:after{
+                left: 9rem;
+              }
+            }
+
+            li{
+
+              &:before{
+                left: 9rem;
+              }
+
+              .tree-list-simple-name{
+                padding-left: 13rem;
+
+                &:before, &:after{
+                  left: 11rem;
+                }
+              }
+
+              li{
+
+                &:before{
+                  left: 11rem;
+                }
+
+                .tree-list-simple-name{
+                  padding-left: 15rem;
+
+                  &:before, &:after{
+                    left: 13rem;
+                  }
+                }
+
+                li{
+
+                  &:before{
+                    left: 13rem;
+                  }
+
+                  .tree-list-simple-name{
+                    padding-left: 19rem;
+
+                    &:before, &:after{
+                      left: 15rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

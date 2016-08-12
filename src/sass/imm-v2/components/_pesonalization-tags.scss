@@ -1,0 +1,36 @@
+
+.pesonalization-tags{
+  border: 0.1rem solid $form-border-color;
+  background: #fff;
+  list-style: none;
+  margin: 0;
+  padding:  0;
+  position: relative;
+  height: 100vh;
+
+  li{
+    cursor: pointer;
+    line-height: 2.6rem;
+    margin: 0;
+    padding: 0.2rem 0 0.2rem 2rem;
+    position: relative;
+    transition: background $time;
+
+    &:hover{
+      background: $form-border-color;
+    }
+
+    .icon{
+      color: $primary_color;
+      cursor: pointer;
+      position: absolute;
+      right: 2rem;
+
+      &:before{
+        line-height: 2rem;
+        height: 2rem;
+        margin: -1rem 0 0 0;
+      }
+    }
+  }
+}

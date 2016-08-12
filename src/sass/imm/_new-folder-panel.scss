@@ -1,0 +1,8 @@
+.alert-wrapper{
+  margin-top: 73px;
+  display:none;
+
+  &.show-validation-error{
+    display:block;
+  }
+}

@@ -1,0 +1,65 @@
+
+.pagination-wrapper {
+  padding: 1rem $gap;
+  flex-shrink: 0;
+
+  border-top: 0.1rem solid $form-border-color;
+  text-align: right;
+}
+
+.pagination {
+  display: flex;
+  flex-flow: row;
+  flex-shrink: 0;
+
+  margin: 1rem;
+  padding: 0;
+
+  justify-content: flex-end;
+  list-style: none;
+
+  li {
+    margin: 0 0 0 0.5rem;
+    padding: 0;
+
+    text-align: center;
+
+    &.active {
+      a {
+        background-color: #f1f1f1;
+        color: $grey_color;
+        cursor: default;
+      }
+    }
+
+    &.disabled {
+      a {
+        color: $grey_color;
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+
+    width: 3rem;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 2.8rem;
+    text-align: center;
+    border: 0.1rem solid $form-border-color;
+    transition: color $time, background $time, border-color $time;
+
+    &:hover {
+      background: $primary_color;
+      color: $hoverBk-color;
+    }
+  }
+}

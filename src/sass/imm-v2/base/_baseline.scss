@@ -1,0 +1,59 @@
+
+body{
+  color: $base-color;
+}
+
+a{
+  //color: $base-color;
+  color: $primary_color;
+  text-decoration: none;
+
+  &:hover{
+
+  }
+
+}
+
+table{
+
+  th{
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  td{
+    text-align: left;
+    vertical-align: top;
+  }
+}
+
+.required{
+
+  &:after{
+
+    color: $primary_color;
+    content: '*';
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 0 0 0.5rem;
+  }
+
+  &.red{
+    color: red;
+  }
+}
+
+.v-align-baseline{
+  align-self: baseline;
+}
+
+.hide{
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+p{
+  margin: 0 0 1rem 0;
+}

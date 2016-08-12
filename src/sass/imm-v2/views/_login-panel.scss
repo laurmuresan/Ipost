@@ -1,0 +1,162 @@
+
+#login-page-wrapper{
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+
+  .svg-bk{
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0.025;
+    position: fixed;
+    right: 15%;
+    top: 0;
+    text-align: right;
+    z-index: 1;
+
+    svg{
+      height: 100vh;
+      min-height: 50rem;
+      min-width: 50rem;
+      width: calc(100vh / 1.5);
+    }
+  }
+}
+
+#login-page{
+  align-items: center;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column;
+  justify-content: center;
+  padding: $gap;
+  position: relative;
+  z-index: 2;
+}
+
+#login-page-body{
+  display: flex;
+  flex-flow: column;
+  max-width: 51rem;
+  max-height: 100%;
+  width: 80vw;
+
+  @include breakpoint(s){
+    width: auto;
+  }
+}
+
+
+.login-page-header{
+  padding: 0 0 10rem 0;
+  text-align: center;
+  transition: padding $time;
+
+  @include breakpoint-h(m){
+    padding-bottom: 3rem;
+  }
+}
+
+#login-page-content{
+
+
+  h1{
+    border-bottom: 0.1rem solid $form-border-color;
+    color: $primary_color;
+    font-size: 1.6rem;
+    margin: 0 0 2rem 0;
+    padding: 0 0 1rem 0;
+  }
+
+  p{
+    margin: 0 0 1rem 0;
+  }
+
+  label{
+    display: block;
+    margin: 0 0 1rem 0;
+    position: relative;
+
+    &:before{
+      color: $primary_color;
+      font-size: 1.8rem;
+      left: 1rem;
+      line-height: 3.4rem;
+      position: absolute;
+    }
+
+
+    input[type="text"], input[type="password"], input[type="email"] {
+      padding: 0 0 0 3.5rem;
+      width: 100%;
+    }
+
+    .forgot{
+      font-size: 1.2rem;
+      line-height: 3.4rem;
+      position: absolute;
+      right: 1rem;
+      top: 0;
+    }
+  }
+
+  .btn-wrappers{
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    i{
+      margin: 0 0 0 1rem;
+      vertical-align: middle;
+
+      &.icon-arrow-circle-left{
+        margin: 0 1rem 0 0;
+      }
+    }
+  }
+
+  .error-panel{
+    border: 0.1rem solid $warning-color;
+    font-size: 1.2rem;
+    margin: 0 0 $gap 0;
+    padding: 2rem;
+
+    h2{
+      color: $warning-color;
+      font-size: 1.4rem;
+      margin: 0 0 1rem 0;
+      text-transform: uppercase;
+
+      &:before{
+        @extend %icon;
+        content: '\F258';
+        font-size: 3rem;
+        margin: 0 1rem 0 0;
+        vertical-align: middle;
+      }
+    }
+
+    p{
+      margin: 0;
+    }
+  }
+
+}
+
+#login-page-footer{
+  padding: 0 0 $gap 0;
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 2;
+
+  p{
+    margin: 0 0 0.5rem 0;
+  }
+
+}

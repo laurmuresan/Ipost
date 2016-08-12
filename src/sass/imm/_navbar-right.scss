@@ -1,0 +1,38 @@
+.show-right-navbar {
+  right: 0 !important;
+}
+
+#off-sidebar .hm-tab {
+  border-bottom: none !important;
+}
+
+.app-offsidebar-open:after {
+  position: absolute;
+  font-size: 17px;
+  padding: 0;
+  margin: 0;
+  font-family: 'themify';
+  content: "\e6d9" !important;
+  left: 5px;
+  top: 0;
+}
+
+.subclient-item {
+  height: 50px;
+  vertical-align: middle;
+  display: table !important;
+
+  i {
+    font-size: 26px;
+    margin-right: 0 !important;
+  }
+
+  div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+h4.media-heading {
+  margin-bottom: 0;
+}

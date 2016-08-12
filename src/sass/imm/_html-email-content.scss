@@ -1,0 +1,80 @@
+.paste-html-email {
+  .email-title-section:first-child {
+  }
+  .content-tab {
+    cursor: pointer;
+    padding: 2px 20px;
+    &.selected {
+      background: #007AFF;
+      color: #ffffff;
+    }
+  }
+  .plain-text-tab {
+    left: 100px;    
+  }
+  .source-tab {
+    left: 265px;
+  }
+  .text-section {
+    .text-input {
+      .content-dropzone > div {
+        height: 100%;
+      }
+      .cke_editor_editor {
+        height: 100%;
+        .cke_inner {
+          height: calc(100% - 135px);
+        }
+      }
+      .form-group {
+        resize: none;
+        width: 100%;
+        height: 100%;
+        border: none;
+        overflow-y: auto;
+        textarea {
+          &:focus {
+            box-shadow: none !important;
+            border-color: 1px solid #bbbac0 !important;
+            background-color: #F8F8F8 !important;
+          }
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background-color: #FFFFFF;
+          border: none;
+          border-radius: 0 0 0 0 !important;
+          color: black;
+          font-family: inherit;
+          font-size: 14px;
+          line-height: 1.2;
+          padding: 5px 4px;
+          transition-duration: 0.1s;
+          box-shadow: none !important;
+          -webkit-transition: 300ms ease-in-out;
+          -moz-transition: 300ms ease-in-out;
+          -ms-transition: 300ms ease-in-out;
+          -o-transition: 300ms ease-in-out;
+          transition: 300ms ease-in-out;
+        }
+      }
+    }
+  }
+  .editor-container {
+    height: 350px;
+  }
+}
+.content-textarea {
+
+  textarea.cke_editable, .cke_wysiwyg_frame {
+    background: url('/static/img/drag-and-drop.png') no-repeat center;
+  }
+  .form-group {
+    background: url('/static/img/drag-and-drop.png') no-repeat center;
+  }
+}
+
+.cke_editable {
+  min-height: 20px;
+}
+

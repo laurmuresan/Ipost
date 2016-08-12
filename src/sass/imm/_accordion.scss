@@ -1,0 +1,55 @@
+.imm-accordion {
+  &-title {
+    padding: 12px 15px;
+
+    background-color: $list-item-highlight;
+    border-bottom: 1px solid darken(#efefef, 5%);
+    cursor: pointer;
+
+    font-weight: bold;
+    @include user-select(none);
+  }
+
+  .nav-pills > li > a {
+    padding: 6px 15px;
+
+    color: $black;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+    &:hover {
+      background-color: $navigation-border;
+    }
+
+    &:focus,
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  .imm-accordion-item {
+    padding: 10px 10px 10px 20px;
+    cursor: pointer;
+    color: $black;
+    font-weight:bold;
+    background-color: lighten($list-item-highlight, 4%);
+    border-bottom: 1px solid darken(#efefef, 5%);
+    font-size: 13px;
+
+    &:hover {
+      background-color: $navigation-border;
+    }
+
+    &:focus,
+    &:active {
+      background-color: transparent;
+    }
+  }
+}
+
+
+.imm-accordion-header {
+  padding: 5px;
+  background-color: darken($list-item-highlight, 25%);
+  color: white;
+  font-weight: bold;
+}

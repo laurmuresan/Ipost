@@ -1,0 +1,93 @@
+.custom-form {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  padding-bottom: 20px;
+
+  .modal-lg {
+    height: 100%;
+
+    .modal-content {
+      height: 90%;
+    }
+
+    .modal-body {
+      height: calc(100% - 120px);
+    }
+
+    .edit-subscriber-info {
+      height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+
+      i.ti-search {
+        right: 10%;
+      }
+    }
+
+    .edit-subscriber-radios {
+      margin-top: 20px;
+
+      .edit-subscriber-radio-buttons {
+        label {
+          padding-left: 0;
+          padding-top: 5px;
+          cursor: pointer;
+        }
+        input {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .subscribers-export-form {
+    padding: 0 20px;
+
+    span {
+      line-height: 20px;
+    }
+    .export-label-groups {
+      input {
+        position: absolute;
+      }
+
+      span {
+        margin-left: 20px;
+        line-height: 20px;
+      }
+    }
+    h5 {
+      background-color: #E6E8E8;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 0 -20px 10px;
+    }
+
+    h4 {
+      background-color: transparent;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 0 -20px 10px;
+      font-size: 14px;
+    }
+
+
+    p {
+      margin: 20px 0 10px;
+    }
+
+    button {
+      margin-bottom: 20px;
+    }
+
+    button.in-header {
+      margin-top: -6px;
+    }
+
+    a.export-select-all {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}

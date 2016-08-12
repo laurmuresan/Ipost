@@ -1,0 +1,255 @@
+
+.step-preview-layout{
+  display: flex;
+  flex: 1 auto;
+  flex-flow: row;
+  min-height: 0;
+  padding: $gap/2 $gap;
+
+  @include breakpoint(s){
+    flex-flow: column;
+  }
+
+}
+
+.step-preview-display{
+  background: #fff;
+  border: 0.1rem solid $form-border-color;
+  display: flex;
+  flex: 7;
+  min-height: 0;
+  margin: 0 1rem 0 0;
+  padding: $gap;
+  overflow: auto;
+  transition: width $time;
+
+  @include breakpoint(l){
+    flex: 4;
+  }
+
+  @include breakpoint(s){
+    flex: 1 0 auto;
+    margin: 0 0 $gap 0;
+  }
+}
+
+.step-preview-options{
+  display: flex;
+  flex: 2;
+  flex-flow: column;
+  min-height: 0;
+  max-width: 30%;
+  transition: width $time;
+
+  @include breakpoint(xl){
+    flex: 3;
+  }
+
+  @include breakpoint(l){
+    flex: 3;
+  }
+
+  @include breakpoint(m){
+    flex: 4;
+  }
+
+  @include breakpoint(s){
+    flex: 1 0 auto;
+    margin: 0 0 $gap 0;
+    max-width: none;
+  }
+
+  .step-preview-devices{
+    background: #fff;
+    border: 0.1rem solid $form-border-color;
+    display: flex;
+    flex: 1 auto;
+    flex-flow: column;
+
+    ul{
+      overflow: auto;
+    }
+  }
+
+  h2{
+    color: $primary_color;
+    font-weight: bold;
+    padding: 2rem;
+    text-transform: uppercase;
+
+  }
+
+  ul{
+    flex: 1 auto;
+    flex-flow: row wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0 ($gap / 3) * 2;
+    @extend %clearfix;
+
+    li{
+      box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0);
+      border: 0.1rem solid $form-border-color;
+      cursor: pointer;
+      float: left;
+      margin: 1rem;
+      padding: calc(50% - 2rem) 0 0 0;
+      position: relative;
+      text-align: center;
+      transition: background $time/2, border-color $time/2, color $time/2, box-shadow $time/2;
+      width: calc(50% - 2rem);
+
+      @include breakpoint(m){
+        float: none;
+        padding-top: calc(100% - 2rem);
+        width: auto;
+      }
+
+      &:hover, &.active{
+        background: $primary_color;
+        border-color: transparent;
+        box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.35);
+        color: #fff;
+      }
+
+      .device-name{
+        bottom: 0;
+        font-size: 1.3rem;
+        line-height: 1;
+        height: 100%;
+        left: 0;
+        padding: 65% 0 0 0;
+        position: absolute;
+        width: 100%;
+
+        &:before{
+          @extend %icon;
+
+          font-size: 4rem;
+          left: 0;
+          position: absolute;
+          top: 20%;
+          text-align: center;
+          width: 100%;
+
+          @include breakpoint(l){
+            font-size: 3rem;
+          }
+
+          @include breakpoint(m){
+            font-size: 2.5rem;
+          }
+        }
+
+        em{
+          display: block;
+          font-size: 1rem;
+          font-style: normal;
+        }
+      }
+    }
+  }
+
+  .preview-form-row{
+    margin: 1rem 0 1rem;
+
+    p{
+    }
+
+    .form-row-ok{
+      margin: 0;
+    }
+  }
+
+  .btn-wrappers{
+    flex-shrink: 0;
+  }
+}
+
+.preview-device{
+  display: flex;
+  flex: 1 0 auto;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+
+.preview-device-wrapper{
+  display: flex;
+  flex: 1 auto;
+  height: 100%;
+  overflow: auto;
+  width: 0;
+
+  .preview-inner{
+    margin: 0 auto;
+  }
+
+  .preview-iframe{
+    height: 99%;
+    width: 100%;
+  }
+
+  @-moz-document url-prefix() {
+    #fullscreenMoz {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+}
+
+.preview-screen-overflow, .marvel-device .screen.preview-screen-overflow{
+  overflow: auto;
+  white-space: pre-wrap;
+  text-align: justify;
+}
+
+.marvel-device.macbook:before{
+  background: #fff;
+}
+
+.marvel-device.macbook .bottom-bar{
+  background: transparent;
+}
+
+.marvel-device.macbook .bottom-bar:before{
+  background: transparent;
+}
+.marvel-device.macbook .bottom-bar:after{
+  background: transparent;
+}
+
+.marvel-device.macbook .top-bar{
+  background: #fff;
+  box-shadow: 0 0 0;
+  border: 0.1rem solid #d1d1d1;
+}
+
+.marvel-device.macbook .top-bar:before{
+  background: transparent;
+  border-bottom-width: 0.1rem;
+}
+
+.marvel-device.macbook .top-bar:after{
+  background: #fff;
+  border: 0.1rem solid #d1d1d1;
+  box-shadow: 0 0 0;
+}
+.step-preview-display{
+  position: relative;
+}
+  .full-screen {
+    background-image: url("../img/full-screen.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    width: 94px;
+    height: 28px;
+    right: 4%;
+    top: 1%;
+  }
+#fullscreen:-moz-full-screen .top-bar{
+  top:96.5%;
+}

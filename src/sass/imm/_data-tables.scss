@@ -1,0 +1,394 @@
+/* MAIN PROPERTIES PAGE */
+.dt-properties-container {
+  .relationships-wrapper {
+    margin-top: 20px;
+    clear: both;
+  }
+  .dt-attributes-wrapper {
+    border: 1px solid #e3e3e3;
+    &.attribute-validation-error {
+      border: 1px solid #a94442;
+    }
+    .dt-attributes-header {
+      padding: 10px;
+      border-bottom: 1px solid #e3e3e3;
+    }
+    .table {
+      margin-bottom: 0;
+      tbody td {
+        border-bottom: none;
+      }
+    }
+  }
+  .well {
+    background-color: #ededed;
+  }
+  .custom-radio-group {
+    .radio-elements {
+      label {
+        margin-left: 15px;
+        input {
+          margin-right: 5px;
+        }  
+      }
+    }
+  }
+  .dt-relationships {
+    .remove-relationship {
+      margin-top: 28px;
+      color: #337ab7;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .custom-select {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}
+
+/* CREATE NEW ATTRIBUTE MODAL */
+.create-new-attribute-modal {
+  .create-attributes-form {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .checkbox-wrapper {
+    div[class^='col-xs'] {
+      padding: 0;
+    }
+  }
+  div[class^='col-xs'] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  input[type="checkbox"] {
+    margin-top: 10px;
+  }
+  .add-new-attribute-wrapper {
+    overflow: hidden;
+  }
+  .modal-dialog {
+    min-width: 1150px;
+  }
+  .custom-select {
+    &.error-handler-for-inputs {
+      .Select-control {
+        border: 1px solid #a94442;
+        transition: border 0.3s;
+        &:hover {
+          border-color: #aeacb4;
+        }
+      }
+    }
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  .custom-radio-group {
+    .radio-elements {
+      label {
+        margin-left: 15px;
+        input {
+          margin-right: 5px;
+        }  
+      }
+    }
+  }
+  .remove-attribute {
+    color: #337ab7;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+}
+
+.edit-records-modal {
+  .modal-body {
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+  }
+}
+
+.map-records-form {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.upload-records-modal {
+  .csv-header {
+    padding-top: 9px;
+  }
+  .custom-select {
+    padding-left: 15px;
+    padding-right: 14px;
+  }
+  .custom-radio-group {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    .radio-elements {
+      overflow: hidden;
+      float: left;
+      label {
+        margin-left: 15px;
+        input {
+          margin-right: 5px;
+        }  
+      }
+    }
+  }
+}
+
+.data-tables-manager-container {
+  .fixed-cells {
+    width: 100%;
+    max-width: 100%;
+  }
+  .fixed-cells .d-table-cell {
+    width: 16.5%;
+    display: inline-block !important;
+  }  
+}
+
+.records-container {
+
+  .preview-wrapper {
+    height: calc(100% - 114px);
+    overflow: hidden;
+  }
+  .preview-inner {
+    height: 100%;
+    .records-wrappper {
+      height: 100%;
+      .records-table-wrapper {
+        height: 100%;
+        .reactable-th-actions:first-child {
+          text-indent: -99999px;
+        }
+      }
+    }
+  }
+
+  section {
+    height: calc(100% - 35px);
+    position: relative;
+    padding-top: 37px;
+  }
+
+  .table-wrapper {
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .table {
+    border-spacing: 0;
+    width:100%;
+
+    tr {
+      text-align: left;
+
+      td:first-child {
+        width: 50px;
+      }
+    }
+
+    td, th {
+      padding: 10px 25px;
+    }
+
+    th {
+      height: 0;
+      line-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      color: transparent;
+      border: none;
+      white-space: nowrap;
+
+      div{
+        position: absolute;
+        background: transparent;
+        padding: 9px 25px;
+        top: 0;
+        margin-left: -25px;
+        line-height: normal;
+
+      &:first-child div{
+        border: none;
+      }
+    }
+  }
+  .table-record-column-name {
+
+    &.asc:before {
+      left: 0.5rem;
+      border-bottom: 9px solid #333;
+      content: '';
+      top: 1.3rem;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      clear: both;
+      position: absolute;
+      width: 0;
+    }
+
+    &.desc:before {
+      position: absolute;
+      left: 5px;
+      border-top: 9px solid #333;
+      content: '';
+      top: 13px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      clear: both;
+    }
+  }
+  .table-records-actions {
+    width: 4rem;
+
+    .disabled {
+      color: #aaa;
+      cursor: auto;
+    }
+
+    i {
+      color: #337ab7;
+      cursor: pointer;
+    }
+  }
+}
+
+.dynamic-table-container {
+  .imm-pane {
+    width: 100%;
+  }
+}
+
+.existing-relationships-modal {
+  .modal-dialog {
+    width: 35%;
+  }
+  .relationship-content-wrapper {
+    margin-bottom: 20px;
+  }
+  .relationship-header {
+    margin-bottom: 15px;
+  }
+  .relationship-content {
+    & > div:first-child {
+      padding-left: 20px;
+    }
+  }
+}
+
+.manage-column-names-modal {
+  .modal-dialog {
+    width: 50%;
+  }
+}
+
+// Dynamic table filter section
+.dynamic-table-filters {
+  .new-dynamic-table {
+
+  }
+  .section-wrapper {
+    margin-bottom: 40px;
+    .imm-pane-title {
+      margin-bottom: 10px;
+    }
+    .select-relationship-options {
+      margin: 20px;
+    }
+  }
+  .source-table,
+  .new-dynamic-table {
+    border: 1px solid #c8c7cc;
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .imm-accordion-item {
+      &.selected {
+        background: #1c77bc;
+        color: #ffffff;
+      }
+    }
+  }
+  .export-columns-wrapper {
+    text-align: center;
+    margin-top: 110px;
+    .row {
+      margin-bottom: 10px;
+    }
+    button {
+      width: 120px;
+    }
+  }
+  .bottom-buttons > div {
+    display: inline-block;
+  }
+
+  .bottom-buttons > div.right-buttons {
+    float: right;
+  }
+  .top-email {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: white;
+  }
+}
+
+.browse-tables-modal {
+  .Select {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .tables-by-schema {
+    border: 1px solid #c8c7cc;
+    padding: 10px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    input[type='checkbox'] {
+      margin-right: 10px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      padding-left: 15px;
+    }
+    .table-wrapper {
+      label {
+        cursor: pointer;  
+      }
+    }
+  }
+  .selected-tables-by-schema {
+    border: 1px solid #c8c7cc;
+    min-height: 50px;
+  }
+}
+
+// add this to filters page
+.imm-fill-wrapper {
+  .imm-pane {
+    width: 100%;
+  }
+}
+
+// ADD THIS TO FILTERS
+.filter-center-content {
+  overflow: visible;
+}

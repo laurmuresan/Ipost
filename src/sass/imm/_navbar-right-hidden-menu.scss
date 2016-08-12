@@ -1,0 +1,50 @@
+
+#off-sidebar {
+  .hm-tab {
+    color: $right-hidden-menu-blue;
+    border-radius: 0;
+    /*
+    border-color: $right-hidden-menu-tab-border;
+    background: $right-hidden-menu-gray;
+    border-right: 1px solid $right-hidden-menu-tab-border;
+    */
+    background: $header-bk;
+    border-bottom: 1px solid $right-hidden-menu-tab-border;
+    border-left: none;
+    border-top: none;
+
+    @extend %clearfix;
+
+    .navbar-nav {
+      & > li {
+        & > a{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .hm-tab-icons {
+    color: $right-hidden-menu-tab-icons;
+    font-size: 17px;
+  }
+
+  & > div > div > nav > ul {
+    background-color: $right-hidden-menu-off-sidebar;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: $offSidebar-color;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background-color: $right-hidden-menu-off-nav-bck;
+    color: $right-hidden-menu-off-nav;
+  }
+
+
+
+}
+
+
+

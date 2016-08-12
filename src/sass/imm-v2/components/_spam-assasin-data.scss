@@ -1,0 +1,104 @@
+
+.spam-assasin-data{
+
+  h4{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+
+    em{
+      color: $primary_color;
+      font-style: normal;
+      font-weight: normal;
+    }
+  }
+
+
+  .spam-assasin-score{
+    color: $secondary_color;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+
+    &.warning{
+      color: red;
+    }
+
+    .spam-assasin-score-value{
+      font-size: 1.4em;
+    }
+
+    strong{
+      font-size: 1.2em;
+    }
+  }
+
+
+
+}
+
+.table-statistics{
+  font-size: 1.2rem;
+  position: relative;
+  width: 100%;
+
+  tr{
+    padding: 0;
+
+    &.custom-data-table-th{
+      border: 0.1rem solid #c8c7cc;
+    }
+  }
+
+  &.table-with-icons{
+    td{
+      padding-bottom: 1.7rem;
+      padding-top: 1.7rem;
+    }
+  }
+
+  th, td{
+    border-bottom: 0.1rem solid $form-border-color;
+
+    &.table-actions-td, &.table-actions-th{
+      background: #fff;
+      border-bottom: 0;
+      padding: 1rem;
+      right: 0;
+      text-align: right;
+      width: 10rem;
+      white-space: nowrap;
+
+      .icon-pencil{
+        color: $secondary_color;
+
+        &:disabled, &.disabled{
+          color: $base-color;
+        }
+      }
+    }
+  }
+
+  .td-width-small, .td-width-icon{
+    padding: 0;
+    text-align: center;
+    width: 5rem;
+  }
+
+  &.table-statistics-cols {
+    tr {
+      th:nth-child(1) {
+        width: 20%;
+      }
+
+      th:nth-child(2) {
+        width: 1%;
+      }
+    }
+  }
+}
+
+.spam-assasin-disclaimer{
+  font-size: 1.2rem;
+  margin: 2rem 0 0 0;
+}

@@ -1,0 +1,50 @@
+
+.layout-2cols-split{
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint(s){
+    display: block;
+  }
+
+  .col{
+    flex: 1 auto;
+    max-width: 50rem;
+    padding: 0 $gap 0 0;
+    position: relative;
+
+    @include breakpoint(s){
+      display: block;
+      max-width: 100%;
+      margin: 0 0 2rem 0;
+      padding-right: 0;
+    }
+
+    &:last-child{
+      padding-right: 0;
+    }
+
+    &.has-icon{
+      padding-right: 6rem;
+    }
+
+    label{
+      display: block;
+      margin: 0 0 0.5rem 0;
+    }
+
+    select, .Select{
+      display: block;
+      width: 100%;
+    }
+
+    .icon, .btn-icon{
+      bottom: 0;
+      position: absolute;
+      right: 0;
+    }
+
+  }
+}
+
+

@@ -1,0 +1,17 @@
+.imm-pane {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+
+  &-title {
+    position: relative;
+    padding: 12px 15px;
+
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #e2e2e2;
+
+
+    font-weight: bold;
+    z-index: 10;
+  }
+}

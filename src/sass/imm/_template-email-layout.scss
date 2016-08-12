@@ -1,0 +1,74 @@
+.layout-fieldset {
+  height: 500px;
+}
+
+.layout-saved-templates {
+  width: 70%;
+  margin: 30px auto 0 auto;
+
+  .layout-saved-templates-container {
+    background-color: #FFFFFF;
+    border: 1px solid #c8c7cc;
+    border-radius: 0 0 0 0 !important;
+    color: black;
+    padding: 5px 4px;
+    height: 300px;
+    overflow: hidden;
+
+    .list-tree-view-body {
+      max-height: calc(100% - 35px);
+      overflow-y: auto;
+    }
+    .toggle-view {
+      overflow: hidden;
+      > div {
+        float: right;
+        overflow: hidden;
+      }
+      a {
+        padding: 5px;
+      }
+    }
+    .list-view {
+      padding: 0;
+      list-style: none;
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        border: 1px solid #fff;
+        &:hover {
+          background-color: #007AFF;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .nav {
+    ul {
+      list-style: none;
+    }
+    > li {
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        border: 1px solid #fff;
+        &:hover {
+          background-color: #007AFF;
+          color: #fff;
+        }
+        &.active {
+          background-color: blue;
+        }
+      }
+    }
+  }
+  .panel-title {
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,35 @@
+.warning-modal-wrapper{
+  padding:20px;
+  position: relative;
+  left: 14px;
+
+  i{
+    font-size: 120px;
+    margin-left: 36%;
+  }
+  .warning-title, .warning-body{
+    text-align:center;
+    margin: 25px 0 25px 0;
+  }
+  h1{
+    font-size:28px;
+  }
+  h2{
+    font-size:16px;
+  }
+  .warning-buttons-wrapper{
+    position: relative;
+    left: 28%;
+    padding: 10px;
+    margin-top: 28px;
+  }
+  .warning-body{
+    overflow-y:auto;
+    height:120px;
+  }
+}
+.modal-footer{
+  .btn-toolbar{
+    float:right;
+  }
+}

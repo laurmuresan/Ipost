@@ -1,0 +1,62 @@
+
+
+.page-header{
+  border-bottom: 0.1rem solid $form-border-color;
+  display: flex;
+  font-size: 1.6rem;
+  flex: 0 0 auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem $gap;
+  transition: padding-top $time, padding-bottom $time;
+
+  @include breakpoint-h(m){
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  @include breakpoint(m){
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  @include breakpoint(s){
+    flex-flow: column;
+  }
+
+  @extend %clearfix;
+
+    h1{
+      flex: 1 auto;
+      font-family: 'Raleway', Helvetica, Arial, sans-serif;
+      font-weight: 200;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin: 0 0 0 0;
+      padding: 1rem 3rem 1rem 0;
+      text-transform: uppercase;
+      transition: font-size $time;
+      white-space: nowrap;
+      /*
+      width: 40%;
+      */
+
+      @include breakpoint(m){
+        font-size: 2.4rem;
+      }
+
+      @include breakpoint(s){
+        font-size: 1.8rem;
+      }
+    }
+
+    .rSide{
+      float: right;
+      width: 60%;
+
+      @include breakpoint(s){
+        margin: 1rem 0 0 0;
+        width: 100%;
+      }
+    }
+}

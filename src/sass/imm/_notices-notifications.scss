@@ -1,0 +1,14 @@
+.error-text-color {
+  color: #a94442;
+}
+.error-handler-for-inputs {
+  input{
+    border: 1px solid #a94442;
+  }
+}
+input.error-handler-for-inputs {
+    border: 1px solid #a94442;
+}
+.error-handler-react-select {
+  border: 1px solid #a94442;
+}

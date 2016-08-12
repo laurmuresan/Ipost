@@ -1,0 +1,228 @@
+
+
+.step-properties-wrapper{
+  display: flex;
+  flex: 1 auto;
+  flex-flow: column;
+  min-height: 0;
+  padding: 0;
+}
+
+.step-properties-layout{
+  align-items: stretch;
+  display: flex;
+  flex: 1 auto;
+  flex-flow: row;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+  padding: 2rem 0;
+
+  .step-properties-wrapper &{
+    flex: 0 0 auto;
+    padding-bottom: 0;
+  }
+
+  &.vertical{
+    flex-flow: column;
+  }
+
+  @include breakpoint(s){
+    flex-flow: column;
+  }
+
+  .title-area{
+    @extend %title-area;
+    position: absolute;
+    top: calc( -1 * ( #{$gap} + 0.1rem));
+  }
+}
+
+.step-properties-form{
+  flex: 6 0rem;
+  min-height: 0;
+  margin: 0 1rem 0 2rem;
+  transition: width $time;
+
+  .step-properties-form-content {
+    /*
+    border: 0.1rem solid $form-border-color;
+    */
+    padding: 0 2rem 2rem 0;
+
+    @include breakpoint(s){
+      padding-right: 0;
+    }
+  }
+
+  @include breakpoint(s){
+    flex: 1 0 auto;
+    margin: 0 $gap $gap $gap;
+  }
+}
+
+.step-properties-preview{
+  flex: 5;
+  margin: 0 2rem 0 0;
+
+  @include breakpoint(s){
+    flex: 1;
+    margin: 0 $gap;
+  }
+
+  .step-properties-preview-btns{
+    margin: 0;
+    padding: 0;
+
+    .btn-wrappers{
+      margin: 0;
+      padding: 0;
+
+      button{
+        margin: 0 1rem 0 0;
+      }
+    }
+  }
+
+  .img-wrapper{
+
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .step-properties-preview-info{
+    margin: 1rem 0 $gap 0;
+
+    h3{
+      font-weight: normal;
+    }
+
+    strong{
+      color: $primary_color;
+      font-style: normal;
+    }
+
+    &.step-properties-preview-info-automation {
+      margin-top: 0;
+    }
+  }
+
+  .records-wrapper{
+    background: $records-wrapper-BK;
+    font-size: 2.5rem;
+    padding: 2rem;
+    text-align: center;
+
+    p{
+      margin: 0;
+    }
+  }
+}
+
+.step-properties-footer{
+  flex: 1 auto;
+  padding: $gap $gap 0;
+
+  h4{
+    border-bottom: 0.1rem solid $form-border-color;
+    color: $primary_color;
+    font-weight: bold;
+    margin: 2rem 0 2rem 0;
+    padding: 0 0 2rem 0;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+.icons-flow {
+
+  .icons-wrapper {
+    padding: 6rem;
+    text-align: center;
+    background-color: $records-wrapper-BK;
+    text-transform: lowercase;
+    .text-style {
+      font-size: 2.3rem;
+      line-height: 1;
+      color: #babdc0;
+      margin: 0 1rem 0 0;
+      right: 0;
+      display: inline-table;
+      vertical-align: -webkit-baseline-middle;
+      width: auto;
+      max-width: 4%;
+    }
+    span.icon.icon-lists, span.icon.icon-template,.icon.icon-headers-and-footers,.icon.icon-filters,.icon.icon-email {
+      vertical-align: -webkit-baseline-middle;
+      font-size: 4rem;
+      color: #babdc0;
+      position: relative;
+      top: 6px;
+      left: 0;
+    }
+  }
+  .icons-wrapper.no-text{
+    font-size: 16rem;
+    color: #babdc0;
+  }
+  .icons-wrapper.no-text.text-email{
+    padding: 0;
+  }
+  .icons-wrapper.suppresion-list{
+    .text-style {
+      max-width: 32%;
+    }
+  }
+  //.icons-wrapper.draganddrop-list{
+  //  padding: 15.7rem;
+  //
+  //  .text-style {
+  //    width: 13rem;
+  //  }
+  //}
+  //.icons-wrapper.templates{
+  //  padding: 15.7rem;
+  //
+  //  .text-style {
+  //    width: 14rem;
+  //  }
+  //  .icon.icon-lists,.icon.icon-email{
+  //    vertical-align: -webkit-baseline-middle;
+  //  }
+  //}
+  //.icons-wrapper.text{
+  //  padding: 9.7rem;
+  //
+  //  .text-style {
+  //    width: 6rem;
+  //  }
+  //  .icon.icon-lists,.icon.icon-email{
+  //    vertical-align: -webkit-baseline-middle;
+  //  }
+  //}
+  //.icons-wrapper.PasteHTML{
+  //  padding: 13.7rem;
+  //
+  //  .text-style{
+  //    width: 10rem;
+  //  }
+  //
+  //}
+  .icons-wrapper.prebuilt,.icons-wrapper.icon.icon-template,.icons-wrapper.icon.icon-headers-and-footers,.icons-wrapper.icon.icon-filters  {
+    .text-style{
+      max-width: 10%;
+    }
+  }
+  .step-properties-preview-info {
+    font-size: 1.3rem;
+    font-weight: normal;
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}

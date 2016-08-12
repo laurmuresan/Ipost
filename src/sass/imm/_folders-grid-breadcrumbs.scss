@@ -1,0 +1,139 @@
+.folders-grid-breadcrumbs-container {
+  background-color: #ededed;
+  padding: 10px;
+  line-height: 20px;
+
+  .btn-toolbar span .btn {
+    margin-left: 5px; 
+  }
+
+  .folders-grid-breadcrumbs {
+    display: inline-block;
+    .label-margin {
+      margin-left: 10px;
+    }
+    input.check-all {
+      position:relative;
+      margin-right:2px;
+    }
+    span.counter {
+      margin-right: 10px;
+      padding-left: 10px;
+      color: $icons-blue;
+    }
+    .breadcrumbs-left{
+      display:inline-block;
+      margin-left:4px;
+
+      .breadcrumb-unit {
+        display: inline-block;
+        position: relative;
+        cursor:pointer;
+        div {
+          display: inline-block;
+        }
+        .breadcrumb-separator {
+          margin: 0 5px 0 5px;
+          font-size: 10px;
+        }
+        .ti-folder{
+          margin-right:3px;
+        }
+
+        &.hide-breadcrumb {
+          div {
+            position: absolute;
+            bottom: 135%;
+            left: -2%;
+            border: 1px solid #EBEBEB;
+            border-radius: 3px;
+            padding: 5px 10px 5px 10px;
+            z-index: 10;
+            background-color: white;
+            display: none;
+            font-size: 12px;
+          }
+
+          i.ti-folder:hover + div {
+            display: inline-block;
+          }
+
+        }
+      }
+    }
+  }
+  .folders-grid-breadcrumbs-options {
+    position:relative;
+
+    .dropdown-button-wrapper {
+      margin: 0;
+      padding: 0;
+      top: -1px;
+    }
+
+    .btn-toolbar {
+      float: right;
+    }
+
+    .additional-btns {
+      float: left;
+    }
+    .sorting-button-wrapper{
+      display:inline-block;
+      position:relative;
+
+      .dropdown-menu{
+        left:-111px;
+      }
+
+      i{
+        background-color: #E6E6E6;
+        position: absolute;
+        top: 8px;
+        right: 6px;
+        z-index:10;
+
+        &.created-date-selected{
+          right: 103px;
+        }
+      }
+    }
+
+    .icon-component,
+    .nav-button {
+      //margin-right:10px;
+    }
+    .icon-component {
+      cursor: pointer;
+    }
+    > div {
+
+      &.compacted {
+        width: 294px;
+      }
+      .no-buttons {
+        width: 220px;
+      }
+    }
+  }
+}
+
+
+.caret-update>button span.caret {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 1200px) {
+    .breadcrumb-unit {
+        font-size: 10px;
+    }
+    .folders-grid-breadcrumbs-options {
+      .btn-toolbar {
+        .btn {
+          font-size: 10px !important;
+        }
+      }
+    }
+}
+

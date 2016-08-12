@@ -1,0 +1,35 @@
+.navbar-header {
+  span {
+    a.iPost-logo.left-nav-closed {
+      position: relative;
+      left: 260px;
+    }
+  }
+}
+
+.navbar-header {
+  span {
+    a.navbar-brand.iPost-logo {
+      margin-left: 0;
+    }
+  }
+}
+
+.navbar-collapse.collapse.left-nav-closed,
+.navbar.navbar-default.navbar-static-top.left-nav-closed .container-fluid .navbar-header,
+.navbar-middle.navbar-collapse.left-nav-closed {
+  position: fixed;
+  left: -195px;
+  top: 0;
+  right: 0;
+}
+
+
+.iPost-logo{
+
+  img{
+    max-height: 60px;
+  }
+
+
+}

@@ -1,0 +1,476 @@
+/* IMPORT FONT */
+@font-face {
+  font-family: "imm";
+  src:url("../font/imm.eot");
+  src:url("../font/imm.eot?#iefix") format("embedded-opentype"),
+  url("../font/imm.woff") format("woff"),
+  url("../font/imm.ttf") format("truetype"),
+  url("../font/imm.svg#imm") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+/* VARIABLES */
+$grey_bk: #f8f8f8;
+$sectionHeader_bk: #e2e2e2;
+$icon_color: #8b91a0;
+$border-color: #cacaca;
+
+
+
+
+
+
+.ti-trash{
+  color: #d43f3a;
+}
+
+.ti-share{
+  color: #1c77bc;
+
+  &:before{
+    font-family: "imm";
+    font-size: 14px;
+    content: '\F237';
+  }
+}
+.ti-folder{
+  color: #8b91a0;
+  &:before{
+    font-family: "imm";
+    font-size: 14px;
+    content: '\F201';
+  }
+
+}
+
+
+
+
+
+%icon{
+  display: inline-block;
+  font-family: 'imm';
+  font-size: 12px;
+  text-rendering: auto;
+}
+
+%iconCss{
+  @extend %icon;
+
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+
+/* */
+
+
+
+.main-section{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0;
+}
+
+.imm-split-layout-wrapper {
+  background: $grey_bk;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  font-size: 12px;
+  height: 100%;
+
+  .header{
+    background: $sectionHeader_bk;
+    min-height: 40px;
+    padding: 5px 5px 5px 25px;
+
+    h3{
+
+      button{
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
+  .btn-opt {
+    background: #fff;
+    border: 2px solid $border-color;
+    display: inline-block;
+    margin: 0 0 0 0;
+    height: 30px;
+    width: 30px;
+  }
+
+  .btn-opt-circular {
+    @extend .btn-opt;
+    border-radius: 50px;
+  }
+
+}
+
+
+.imm-split-layout-west{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  padding: 0 0 0 0;
+  /*
+  */
+  width: 0;
+  overflow-x: hidden;
+
+  &.expanded{
+    padding: 0 0 0 0;
+    width: 20%;
+  }
+
+  .imm-split-layout-west-wrapper{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+  }
+
+  .header{
+
+    h3{
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+
+    > ul{
+      padding-left: 0;
+    }
+  }
+
+  i{
+    font-style: normal;
+  }
+
+
+  ul{
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
+
+
+  li{
+    margin: 0;
+    padding: 0 0 0 0;
+    position: relative;
+
+    &:after{
+      @extend %icon;
+      font-family: 'imm';
+      content: '\F201';
+      color: $icon_color;
+      font-size: 13px;
+      position: absolute;
+      left: 20px;
+      top: 6px;
+      z-index: 0;
+    }
+
+    .imm-tree-view-label{
+      cursor: default;
+      display: block;
+      line-height: 16px;
+      padding: 6px 10px 6px 40px;
+      position: relative;
+      z-index: 0;
+      width: 100%;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+
+      &:hover{
+        background: $sectionHeader_bk;
+      }
+    }
+
+    ul{
+      //display: none;
+      margin: 0 0 0 0;
+      padding: 0 0 0 15px;
+    }
+
+    &.open{
+      > ul{
+        display: block;
+      }
+
+    }
+  }
+
+  .imm-tree-view-expander{
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    left: 0;
+    position: absolute;
+    padding: 0;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s, top 0.25s;
+    top: 4px;
+    width: 16px;
+    z-index: 1;
+
+    &:before{
+      @extend %icon;
+
+      content: '\F200';
+      color: $icon_color;
+      display: inline-block;
+      height: 16px;
+      font-size: 9px;
+      line-height: 14px;
+      text-align: center;
+      width: 16px;
+    }
+
+    &:hover{
+      transform: rotate(0deg);
+
+      &.imm-tree-view-label:before{
+        background: $sectionHeader_bk;
+      }
+    }
+  }
+}
+
+.imm-split-layout-center{
+  display: flex;
+  flex-flow: row;
+  flex: 4;
+  padding: 0 0 0 0.9rem;
+  position: relative;
+}
+
+.imm-split-layout-divider{
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 15px;
+
+  &:hover{
+    background: $sectionHeader_bk;
+  }
+
+  i{
+    height: 20px;
+    line-height: 20px;
+    left: 0;
+    margin: -10px 0 0 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 15px;
+  }
+}
+
+.imm-content-wrapper{
+  background: #fff;
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  margin: 0 0 0 0;
+  width: 100%;
+  @include user-select(none);
+
+  .header{
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    padding: 0 15px 0 0;
+
+    .tree-breadcrumbs{
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    .tree-toolbar{
+      align-items: center;
+      display: flex;
+      padding: 0 5px 0 0;
+    }
+
+    .btn-opt{
+      margin: 0 0 0 5px;
+    }
+
+    .btn{
+      height: 30px;
+      margin: 0 5px;
+      padding: 0 10px;
+    }
+  }
+
+  .body{
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 15px 0 0;
+
+    .imm-content-view{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li{
+      border-bottom: 1px solid $sectionHeader_bk;
+      display: flex;
+      flex-flow: row;
+      min-height: 54px;
+      padding: 10px 10px;
+
+      input{
+        margin: 2px 0 0 0;
+      }
+
+      .imm-content-item{
+        flex: 1;
+        padding: 0 0 0 30px;
+        position: relative;
+        width: 50%;
+
+        &:before{
+          @extend %icon;
+          content: "\F203";
+          color: #5cb85c;
+          left: 10px;
+          line-height: 16px;
+          margin: 0 0 0 0;
+          position: absolute;
+          top: 1px;
+        }
+
+        &.email-icon:before {
+          content: "\F203";
+        }
+
+        &.folder-icon:before {
+          content: "\F201";
+        }
+
+        .imm-content-name-row, .imm-attributes-row{
+          align-items: center;
+          display: flex;
+          flex-flow: row;
+          margin: 0 40px 0 0;
+
+          .imm-content-file-name{
+            color: #1c77bc;
+            margin: 0 40px 0 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+
+          .imm-attribute-item{
+            flex: 1;
+            display: block;
+            margin: 0 20px 0 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.tree-breadcrumbs-list{
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 10px 0 10px;
+  padding: 0;
+
+  &:before{
+    @extend %icon;
+    content: "\F201";
+    font-size: 13px;
+    line-height: 10px;
+    color: $icon_color;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+
+  }
+}
+
+
+.imm-content-footer{
+  padding: 10px 0 0 0;
+  text-align: right;
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 0;
+    text-align: center;
+  }
+
+  a{
+    border: 1px solid #dddddd;
+    display: inline-block;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+
+    &:hover{
+      background: #eeeeee;
+    }
+  }
+
+  &.active{
+    a{
+      background: #007aff;
+      color: #fff;
+    }
+  }
+
+  &.disabled{
+    a{
+      cursor: not-allowed;
+    }
+  }
+
+
+
+
+}

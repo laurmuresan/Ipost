@@ -1,0 +1,17 @@
+.personalization-tags-list-item {
+  height: 30px;
+  padding: 5px 5px 5px 0;
+
+  i {
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: $list-item-highlight;
+  }
+}
+
+.personalization-tags-list-container {
+  border: 1px solid #c8c7cc;
+  padding: 5px;
+}

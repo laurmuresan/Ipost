@@ -1,0 +1,87 @@
+$font-family-default: 'Open Sans', Helvetica, Arial, sans-serif;
+
+
+/*------------COLORS------------*/
+
+$white: #fff;
+$black: #000;
+$light-black: #333;
+$imm-color-primary: blue;
+$navigation-primary: #2C3543;
+$navigation-secondary: #364150;
+$navigation-border: #CCD5D8;
+$right-hidden-menu-tab-border: #c8c7cc;
+$right-hidden-menu-blue: rgba(0, 122, 255, 0.7);
+$right-hidden-menu-tab-icons: #5F8295;
+$right-hidden-menu-gray: #f2f2f2;
+$right-hidden-menu-off-sidebar: #2A323E;
+$right-hidden-menu-off-nav-bck: #2e3133;
+$right-hidden-menu-off-nav: rgba(95, 130, 149, 0.8);
+$navbar-avatar-hover: #2a2c2d;
+$navbar-right-settings: #2a2c2d;
+$navbar-right-settings-green-btn: #64bd63;
+$navbar-right-settings-shadow: rgba(0, 0, 0, .4);
+$icons-blue: #007aff;
+$list-item-highlight: #F1F1F1;
+$leftNavHoverColor: #13171D;
+$blueMainColor: #1c77bc;
+$greenMainColor: #5cb85c;
+
+$mainBtnColor: #5cb85c;
+
+
+/*------------LAYOUT------------*/
+
+$gutter: 1rem;
+$gutterAll: $gutter $gutter $gutter $gutter;
+
+/* ---------------------------------------------------------------------- */
+/*  Theme 5
+/* ---------------------------------------------------------------------- */
+
+$app-background: #F8F8F8;
+$elements-color: #1FBBA6;
+
+//NAV HEADER COLORS
+$header-color: #383b3e;
+$header-bk: #383b3e;
+$headerBorder-color: transparent;
+$headerText-color: $white;
+$headerElements-color: #5F8295;
+$headerSidebarToggleColor: #fff;
+$headerBorder-color: #000;
+
+//NAV COLLAPSE COLORS
+$collapse-color: #383b3e;
+$collapseBorder-color: #424548;
+$collapseText-color: $white;
+$collapseElements-color: #5F8295;
+$collapseShadow: none;
+$menuMobile-color: darken($header-color, 5%);
+$menuMobileBorder-color: #394557;
+
+//SIDEBAR COLORS
+$sidebar-color: #0f1419;
+$sidebarText-color: rgba(255, 255, 255, 0.3);
+$sidebarBorder-color: transparent;
+$sidebarBorder-width: 0;
+
+//OFF-SIDEBAR COLORS
+$offSidebar-color: #424548;
+$offSidebarBorder-color: #424548;
+$offSidebarText-color: $white;
+$offSidebarElements-color: #5F8295;
+$offSidebarElements-color: #5F8295;
+
+//MAIN NAVIGATION COLORS
+$nav-color: #383b3e;
+$navHeader-bk: #424548;
+$navBorder-color: #4a4e51;
+$navText-color: rgba(255, 255, 255, 0.5);
+$navActive-color: rgba(255, 255, 255, 1);;
+$navActive-bk: #1c75bc;
+$navHover-color: darken($nav-color, 5%);
+$navElements-color: rgba(255, 255, 255, 0.8);
+
+//SCROLLBAR COLORS
+$scrollBar-color: #14181F;

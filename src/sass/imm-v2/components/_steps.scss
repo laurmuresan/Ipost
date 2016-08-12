@@ -1,0 +1,161 @@
+
+
+.steps{
+  padding: 0 3rem 0 3rem;
+  text-transform: capitalize;
+  width: 100%;
+
+  ul{
+    justify-content: space-between;
+    font-size: 1.2rem;
+    display: flex;
+    flex-flow: row;
+    height: 5.5rem;
+    position: relative;
+
+    &:before{
+      background: $grey_color;
+      content: '';
+      display: inline-block;
+      height: 0.5rem;
+      left: 0;
+      position: absolute;
+      top: 1.5rem;
+      z-index: 0;
+      width: 100%;
+    }
+  }
+
+  li{
+    flex: 1;
+    padding: 0 0 0 0;
+    position: relative;
+    text-align: right;
+
+    &:before{
+      background: $primary_color;
+      content: '';
+      display: inline-block;
+      height: 0.5rem;
+      left: 0;
+      position: absolute;
+      transition: width $time;
+      top: 1.5rem;
+      z-index: 0;
+      width: 0;
+    }
+
+    &:first-child:last-child{
+      left: 50%;
+      marguin-left: -0.1rem;
+    }
+
+    &.selected{
+
+      &:before{
+        width: 100%;
+      }
+
+      a {
+
+        .step-title {
+          color: $primary_color;
+
+          &:before {
+            border-color: $primary_color;
+          }
+        }
+      }
+    }
+
+    &.done{
+
+      a {
+
+        .step-title {
+          color: $primary_color;
+
+          &:before {
+            background: $primary_color;
+            border-color: $primary_color;
+            content: '\F222';
+          }
+        }
+      }
+    }
+
+    &:first-child{
+      position: absolute;
+
+      a{
+        left: -2rem;
+        right: auto;
+      }
+
+      &:before{
+        display: none;
+      }
+
+    }
+  }
+
+  a{
+    display: inline-block;
+    position: absolute;
+    right: -50%;
+    text-align: center;
+    width: 100%;
+
+    &:hover{
+
+      .step-title {
+
+        &:before {
+        }
+      }
+    }
+
+    .step-title{
+      color: $base-color;
+      display: inline-block;
+      margin: 0 auto;
+      position: relative;
+      padding: 3.5rem 0 0 0;
+      transition: color;
+      z-index: 3;
+
+      @include breakpoint(m){
+        padding-top: 3.2rem;
+      }
+
+      &:before{
+        @extend %icon;
+
+        background: #fff;
+        border: 0.5rem solid $grey_color;
+        border-radius: 5rem;
+        content: '';
+        color: #fff;
+        display: block;
+        height: 3.3rem;
+        left: 50%;
+        margin: 0 0 0 -1.6rem;
+        position: absolute;
+        transition: border-color 0.25s, background 0.35s, width $time, height $time, top $time, line-height $time;
+        transition-delay: 0.15s;
+        top: 0;
+        width: 3.3rem;
+        z-index: 1;
+
+
+        @include breakpoint(m){
+          height: 2.5rem;
+          line-height: 1.4rem;
+          width: 2.5rem;
+          top: 0.4rem;
+        }
+
+      }
+    }
+  }
+}

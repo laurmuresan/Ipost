@@ -1,0 +1,892 @@
+// TODO: remove the following `.ti-*` classes ASAP
+.ti-trash {
+  color: #d43f3a;
+}
+
+.ti-share {
+  color: #1c77bc;
+
+  &:before {
+    content: '\F237';
+    font-size: 1.4rem;
+    font-family: "imm";
+  }
+}
+
+.ti-folder {
+  color: #8b91a0;
+
+  &:before {
+    content: '\F201';
+    font-size: 1.4rem;
+    font-family: "imm";
+  }
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: 0;
+  flex: 1;
+}
+
+.imm-split-layout-wrapper {
+  background: $bk-color;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  margin: 0.5rem 0 0 0;
+
+  .header {
+    background: $sectionHeader_bk;
+    min-height: 4rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+
+    h3 button {
+      margin: 0 1rem 0 0;
+      vertical-align: middle;
+    }
+  }
+
+  .btn-opt {
+    display: inline-block;
+    margin: 0 0 0 0;
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem solid $form-border-color;
+    background: #fff;
+  }
+
+  .btn-opt-circular {
+    @extend .btn-opt;
+
+    margin: 0 .5rem 0 0;
+    border-radius: 5rem;
+    line-height: 2;
+  }
+}
+
+.imm-split-layout-west {
+  border: 0.1rem solid $form-border-color;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding: 0 0 0 0;
+  width: 0;
+  font-size: 1.4rem;
+
+  &.expanded {
+    padding: 0 0 0 0;
+    width: 20%;
+  }
+
+  .imm-split-layout-west-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+
+    h3{
+      line-height: 3.2rem;
+    }
+  }
+
+  .header h3 {
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  .body {
+    display: flex;
+    overflow-y: auto;
+    padding: 0 0 12rem 0;
+    height: 100%;
+    flex-flow: row;
+    flex: 1;
+
+    > ul {
+      padding-left: 0;
+    }
+  }
+
+  i {
+    font-style: normal;
+  }
+
+}
+
+.imm-tree-view-wrapper {
+  display: flex;
+  width: 100%;
+  flex: 1 auto;
+  @include user-select(none);
+
+  &.imm-tree-view-wrapper-border{
+    border: 0.1rem solid $form-border-color;
+  }
+
+  ul {
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+
+    &.open {
+      max-height: 100rem;
+    }
+  }
+
+  > ul {
+    > li {
+      > .imm-tree-view-item {
+        > .imm-tree-view-expander {
+          display: none;
+
+          .modal-body & {
+            display: block;
+          }
+        }
+      }
+
+      > .imm-tree-view-item {
+
+        &:before {
+          left: 2rem;
+        }
+
+        &:after {
+          left: 2rem;
+        }
+
+      }
+    }
+  }
+
+  .imm-tree-view {
+
+    &.hide {
+      max-height: 0;
+    }
+  }
+
+  li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    .imm-tree-view-item-icon-folder{
+      display: inline-block;
+      height: 1.6rem;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      width: 1.6rem;
+
+      &:before, &:after {
+        @extend %icon;
+
+        color: $icon_color;
+        font-family: 'imm';
+        font-size: 1.3rem;
+        left: 0;
+        position: absolute;
+        top: 0.6rem;
+        transition: opacity $time;
+        z-index: 0;
+      }
+
+      &:before {
+        content: '\F201';
+      }
+
+      &:after {
+        content: '\F202';
+        opacity: 0;
+      }
+
+    }
+
+    .imm-tree-view-item {
+      display: block;
+      transition: $time;
+
+      &.drop-active {
+        background-color: rgba($primary_color, 0.1);
+        box-shadow: inset 0 0 1px $primary_color;
+      }
+/*
+      &:before {
+        left: 4rem;
+        content: '\F201';
+      }
+
+      &:after {
+        left: 4rem;
+        content: '\F202';
+        opacity: 0;
+      }
+*/
+
+      &:hover, &.active {
+        background: $sectionHeader_bk;
+        .imm-tree-view-item-icon-folder{
+
+          &:before {
+            opacity: 0;
+          }
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.open, &.active {
+        .imm-tree-view-item-icon-folder{
+
+          &:before {
+            opacity: 0;
+          }
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .imm-tree-view-label {
+      position: relative;
+      display: block;
+      overflow: visible;
+      padding: 0.6rem 1rem 0.6rem 4rem;
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 1.6rem;
+      cursor: default;
+      border: 1px solid transparent;
+
+      .imm-tree-view-label-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .imm-tree-view-expander {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    display: inline-block;
+    padding: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.25s, top 0.25s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    z-index: 1;
+
+    &:before {
+      @extend %icon;
+
+      display: inline-block;
+      width: 1.6rem;
+      height: 1.6rem;
+      color: $icon_color;
+      content: '\F200';
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.4rem;
+    }
+
+    &:hover, &.down {
+      transform: rotate(0deg);
+
+      &.imm-tree-view-label:before {
+        background: $sectionHeader_bk;
+      }
+    }
+
+    &.imm-tree-view-no-icon {
+      display: none;
+    }
+  }
+
+  > .imm-tree-view > li > .imm-tree-view-item > .imm-tree-view-expander {
+    display: none;
+  }
+}
+
+.imm-split-layout-center {
+  display: flex;
+  flex-flow: row;
+  flex: 4;
+  position: relative;
+  padding: 0 0 0 0.5rem;
+  min-width: 0;
+}
+
+.imm-split-layout-divider {
+/*
+  border-right: 0.1rem solid #ddd;
+  border-left: 0.1rem solid #ddd;
+  */
+  background-color: white;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 0.4rem;
+  z-index: 10;
+
+  &:hover {
+    background: lighten($sectionHeader_bk, 5%);
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1.5rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+
+  .icon-imm-18:before {
+    border: 1px solid #c8c7cc;
+    padding: 0.4rem 0.1rem;
+    background-color: #efefef;
+  }
+
+  .icon-imm-19:before {
+    border: 1px solid #c8c7cc;
+    padding: 0.4rem 0.1rem;
+    background-color: #efefef;
+  }
+}
+
+.imm-content-wrapper {
+  background: #fff;
+  border: 0.1rem solid $form-border-color;
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  margin: 0;
+  user-select: none;
+  width: 100%;
+  min-width: 0;
+
+  .header {
+    display: flex;
+    padding: 0 1.5rem 0 0;
+    align-items: center;
+    flex-flow: row;
+  }
+
+    .tree-breadcrumbs {
+      align-items: center;
+      flex: 1;
+      position: relative;
+      display: flex;
+
+      .label.label-info{
+        border: 0;
+        font-size: 1.1rem;
+        font-weight: normal;
+        margin: 0;
+        position: absolute;
+        left: 2rem;
+        top: 0.2rem;
+      }
+
+      input {
+        margin: 0 0 0 0;
+      }
+
+      .counter {
+        display: inline-block;
+        margin: 0 0 0 0.7rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    .tree-toolbar {
+      display: flex;
+      padding: 0 0.5rem 0 0;
+      align-items: center;
+    }
+
+    .btn-opt {
+      margin: 0 0 0 0.5rem;
+    }
+
+    .btn {
+      margin: 0;
+      padding: 0;
+      height: 3rem;
+    }
+
+  .btn-wrappers.right-side .btn {
+    margin-left: 0;
+  }
+
+  .imm-custom-dropdown {
+    position: relative;
+    margin: 0 5px 0 0;
+    padding: 0 ;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    button {
+      margin: 0;
+      padding: 0.55rem 0.2rem;
+      min-width: 0;
+
+      border: 0.2rem solid $form-border-color;
+      background: white;
+
+      color: $base-color;
+      vertical-align: top;
+
+      font-size: 1.2rem;
+
+      &:before {
+        @extend %icon;
+
+        display: inline-block;
+        margin: 0 1.5rem 0 0.5rem;
+
+        content: '\F204';
+
+        vertical-align: middle;
+
+        font-size: 1.4rem;
+        opacity: 0.8;
+      }
+
+      &:after {
+        @extend %icon;
+
+        display: inline-block;
+        margin: 0 0.5rem 0 1.55rem;
+
+        color: $icon-color;
+
+        content: '\F232';
+
+        vertical-align: top;
+        font-size: 1.4rem;
+        position: absolute;
+        right:0;
+      }
+    }
+
+    &.open {
+
+      button {
+        &:after {
+          content: '\F234';
+        }
+      }
+
+      .imm-custom-dropdown-menu {
+        display: block;
+      }
+    }
+
+    .imm-custom-dropdown-menu {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      margin: -0.1rem 0 0 0;
+      width: 100%;
+      border: 0.1rem solid $form-border-color;
+      background: #fff;
+
+      a {
+        display: block;
+        padding: 0.2rem 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .body {
+    position: relative;
+    display: flex;
+    overflow: auto;
+    padding: 0;
+    min-height: 0;
+    min-width: 0;
+    flex: 1 auto;
+
+    &.loading {
+      @include no-scroll;
+    }
+
+    td {
+      min-height: 5.4rem;
+
+      .imm-content-item {
+        flex: 1 auto;
+        position: relative;
+        padding: 0 0 0 5rem;
+        min-width: 0;
+
+        &.icon-folder{
+          &:before {
+            color: $icon_color;
+          }
+        }
+
+        &:before {
+          @extend %icon;
+          color: #5cb85c;
+          left: 2.2rem;
+          line-height: 3.6rem;
+          margin: -0.8rem 0 0 0;
+          position: absolute;
+        }
+      }
+    }
+
+    .imm-content-view {
+      margin: 0;
+      padding: 0;
+      min-height: 0;
+      list-style: none;
+      flex: 1 auto;
+      min-width: 0;
+
+      > li {
+        align-items: center;
+        border-bottom: 0.1rem solid $sectionHeader_bk;
+        display: flex;
+        flex: 1 auto;
+        flex-flow: row;
+        padding: 1rem 1rem;
+        min-height: 5.4rem;
+
+        input {
+          margin: 0.2rem 0 0 0;
+        }
+
+        .imm-content-item {
+          flex: 1 auto;
+          position: relative;
+          padding: 0 0 0 5rem;
+          min-width: 0;
+
+          &.icon-folder{
+            &:before {
+              color: $icon_color;
+            }
+          }
+
+          &:before {
+            @extend %icon;
+            color: #5cb85c;
+            left: 2.2rem;
+            line-height: 1.6rem;
+            margin: -0.8rem 0 0 0;
+            position: absolute;
+            top: 50%;
+
+          }
+
+          &.icon-email:before {
+            content: "\F203";
+          }
+
+          &.icon-folder:before {
+            content: "\F201";
+          }
+
+          &.icon-process:before {
+            color: $yellow-color;
+          }
+
+          &.icon-journey:before {
+            color: $primary-color;
+          }
+
+          .imm-content-name-row, .imm-attributes-row {
+            position: relative;
+            display: flex;
+            margin: 0 4rem 0 0;
+            align-items: center;
+            flex-flow: row;
+
+            input[type='checkbox'] {
+              position: absolute;
+              top: 50%;
+              left: -5rem;
+              margin: -0.7rem 0 0 0;
+            }
+
+            .imm-content-file-name {
+              margin: 0 4rem 0 0;
+
+              overflow: hidden;
+
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              color: #1c77bc;
+              font-weight: 600;
+              width: 100%;
+
+              > a:hover {
+                text-decoration: underline;
+              }
+            }
+
+            .imm-attribute-item {
+              display: block;
+              overflow: hidden;
+              margin: 0 2rem 0 0;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              flex: 1;
+            }
+          }
+
+          &.imm-content-item-cols{
+            display: flex;
+            justify-content: space-between;
+            min-width: 0;
+            overflow: hidden;
+
+            .imm-content-col{
+              flex: 0 1 20%;
+              min-width: 0;
+              padding: 0 2rem 0 0;
+            }
+
+            .imm-content-col-wide{
+              flex: 1 0 30%;
+              /*
+              max-width: 25%;
+              */
+              min-width: 0;
+            }
+
+            .imm-content-col-row{
+              min-width: 0;
+            }
+
+            .imm-content-file-name{
+              display: block;
+              max-width: 40rem;
+              min-width: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              width: 100%;
+            }
+          }
+
+        }
+
+        &:hover {
+          background-color: $bk-color;
+        }
+      }
+    }
+
+    .imm-content-empty {
+      display: flex;
+      width: 100%;
+
+      color: #999999;
+      text-align: center;
+
+      align-items: center;
+
+      > span {
+        position: relative;
+        display: inline-block;
+        padding-top: 100px;
+        width: 100%;
+
+        height: 120px;
+
+        font-size: 120%;
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 50%;
+
+          margin-left: -38px;
+
+          content: "\F202";
+          font-size: 72px;
+          font-family: "imm";
+        }
+      }
+    }
+  }
+}
+
+.tree-breadcrumbs-list {
+  display: inline-block;
+  margin: 0 1rem 0 2.2rem;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.imm-content-footer {
+  margin: 0;
+  padding: 0 0 0 0;
+  text-align: right;
+
+  ul {
+    margin: 0;
+    padding: $gap/2;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 0 0 0.5rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 3rem;
+    border: 0.1rem solid #dddddd;
+    text-align: center;
+    line-height: 3rem;
+
+    &:hover {
+      background: #eeeeee;
+    }
+  }
+
+  &.active {
+    a {
+      background: #007aff;
+      color: #fff;
+    }
+  }
+
+  &.disabled {
+    a {
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+.activity-status-stop, .activity-status-completed, .activity-status-error, .activity-status-stopped{
+  font-weight: bold;
+  height: 1.5rem;
+  line-height: 1.5rem;
+
+  &:before{
+    @extend %icon;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0 1rem 0 0;
+    position: relative;
+    top: -0.1rem;
+    vertical-align: middle;
+    width: 1.5rem;
+  }
+}
+
+.activity-status-stop{
+  &:before{
+    color: $secondary_color;
+    content: '\F268';
+  }
+}
+
+.activity-status-completed{
+  &:before{
+    border-radius: 5rem;
+    background: $secondary_color;
+    content: '';
+  }
+}
+
+.activity-status-error{
+  &:before{
+    content: '\F258';
+    color: $warning-color;
+  }
+}
+
+.activity-status-stopped{
+  &:before{
+    border-radius: 5rem;
+    background: $error-color;
+    content: '';
+  }
+}
+
+.queue-clear{
+  text-decoration: underline;
+}
+
+
+.folder-rename-wrapper{
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+
+  .form-group{
+    display: inline-block;
+    margin: 0 2rem 0 0;
+    max-width: 50%;
+    vertical-align: top;
+    width: 100%;
+
+    input{
+      width: 100%;
+    }
+  }
+
+  .validation-message{
+    font-weight: normal;
+  }
+}
+
+.folder-rename-options{
+  display: inline-block;
+  line-height: 3.8rem;
+  vertical-align: middle;
+
+  span{
+    color: $form-border-color;
+    display: inline-block;
+    line-height: 3.8rem;
+    margin: 0 0.2rem;
+  }
+
+  .rename-action{
+    cursor: pointer;
+    color: $primary_color;
+  }
+}
+

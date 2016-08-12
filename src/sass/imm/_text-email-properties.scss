@@ -1,0 +1,18 @@
+.properties-container {
+  font-family: "Raleway", sans-serif;
+  height: calc(100% - 145px);
+
+  .properties-container-inner {
+    min-height: calc(100% - 125px);
+
+    &.query {
+      min-height: calc(100% - 53px);
+    }
+  }
+}
+
+.legend-asterisk {
+  color: #007AFF;
+  font-size: 6px;
+  vertical-align: top;
+}

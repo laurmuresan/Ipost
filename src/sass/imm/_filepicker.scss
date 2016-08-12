@@ -1,0 +1,33 @@
+.fp__overlay {
+  z-index: 9999 !important;
+}
+
+input[type="filepicker"] {
+  visibility: hidden;
+}
+
+// TODO: needed for demo
+.img-wrapper {
+  position: relative;
+  width: 720px;
+  height: 320px;
+
+  .btn-aviary {
+    @extend .btn;
+    display: none;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  &:hover {
+    .btn-aviary {
+      display: block;
+    }
+  }
+}

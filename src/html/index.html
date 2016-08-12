@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>iMM</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700,700italic,500,900&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,400italic' rel='stylesheet' type='text/css'>
+
+
+  <link href="/static/<%= version %>/css/application<%= min %>.css" rel="stylesheet" type="text/css"/>
+  <link rel="shortcut icon" href="/static/<%= version %>/img/favicon.ico"/>
+</head>
+<body>
+  <main id="root">
+    <div class="imm-activity-indicator-wrapper">
+      <div class="imm-activity-indicator medium">Initializing...</div>
+    </div>
+  </main>
+  <div id="layered-components"></div>
+
+  <script src="/static/<%= version %>/js/ckeditor/ckeditor.js" defer></script>
+  <script src="/static/<%= version %>/js/ckfinder/ckfinder.js" defer></script>
+  <script src="/static/<%= version %>/js/vendor<%= min %>.js"></script>
+  <script src="/static/<%= version %>/js/application<%= min %>.js"></script>
+  <script>
+    (function (imm) {
+      if (imm && imm.initialize) {
+        imm.initialize(window.mockData || {});
+      }
+    })(window.imm);
+  </script>
+</body>
+</html>

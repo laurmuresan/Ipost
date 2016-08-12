@@ -1,0 +1,71 @@
+
+.tree-view_item {
+  /* immediate child of .tree-view, for styling convenience */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.7;
+  padding: 2px 8px;
+}
+.tree-view_item .node {
+  cursor: pointer;
+  line-height: 1.5em;
+}
+/* style for the children nodes container */
+.tree-view_children {
+  margin-left: 16px;
+}
+
+
+.tree-view_children-collapsed {
+  height: 0px;
+}
+
+.tree-view_arrow {
+  cursor: pointer;
+  margin-right: 6px;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 0.55em;
+}
+
+.tree-view_arrow:before {
+  content: "-";
+}
+
+.tree-view_arrow-collapsed:before {
+  content: "+";
+}
+/* rotate the triangle to close it */
+.tree-view_arrow-collapsed {
+  content: "+";
+}
+
+.tree-view-empty-spacer {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.tree-view_item.selected, .tree-view_item:active, .tree-view_item:focus {
+  outline: none;
+  background-color: #007AFF;
+  color: #ffffff !important;
+  i, .icons-blue {
+    color: #ffffff !important;
+  }
+  &.has-hovering-item{
+    background-color: lighten(#007AFF, 30%);
+  }
+}
+
+.tree-view_item.has-hovering-item{
+  background-color: lighten(#007AFF, 30%);
+  color: #ffffff;
+}
+.expandall{
+  border: none !important;
+}

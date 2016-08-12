@@ -1,0 +1,179 @@
+
+.breadcrumb {
+  display: inline-block;
+  font-size: 1.3rem;
+  list-style-type: none;
+  line-height: 1.4rem;
+  margin: 0;
+  padding-left: 0;
+
+  .modal-assets &{
+    font-weight: bold;
+  }
+
+  > li {
+    cursor: pointer;
+    color: $primary_color;
+    display: inline-block;
+    position: relative;
+
+    &:first-child:before {
+      @extend %icon;
+      content: "\F201";
+
+      margin: 0 0.5rem 0 0;
+
+      font-size: 1.3rem;
+      line-height: 1rem;
+      color: $icon_color;
+      vertical-align: middle;
+
+      .modal-assets &{
+        display: none;
+      }
+
+
+    }
+
+    &:after {
+      @extend %icon;
+      content: "\F232";
+      color: $icon_color;
+      margin: 0 2px;
+      position: relative;
+      top: -0.1rem;
+      vertical-align: middle;
+
+      .modal-assets &{
+        content: '/';
+      }
+    }
+
+    &:last-child {
+      cursor: default;
+
+      color: $headerSecondary_bk;
+
+      &:after {
+        content: '';
+      }
+    }
+
+    a{
+      color: $primary_color;
+    }
+
+    .btn{
+      height: auto;
+      padding: 0;
+    }
+
+    &.breadcrumb-dropdown{
+
+      &:after{
+        display: none;
+      }
+
+      .dropdown{
+        border: 0.1rem solid transparent;
+        padding: 0 0 0 0.5rem;
+        margin: 0 0.5rem 0 -0.5rem;
+
+        &.open{
+          border-color: $form-border-color;
+          background: #fff;
+
+          &:before{
+            bottom: -0.1rem;
+            background: #fff;
+            content: '';
+            display: inline-block;
+            left: 0;
+            height: 0.2rem;
+            position: absolute;
+            width: 100%;
+            z-index: 1001;
+          }
+        }
+
+        .dropdown-menu{
+          border-top-left-radius: 0;
+          margin: -0.1rem 0 0 -0.1rem;
+        }
+      }
+
+      #breadcrumb-dropdown{
+        border: 0;
+        color: $primary_color;
+        font-size: 1.4rem;
+        margin: 0 0 0 0;
+
+        &:before{
+          @extend %icon;
+          color: $icon-color;
+          margin: 0 0 0 0;
+
+          content: '\F201';
+        }
+      }
+    }
+  }
+
+  &-passive {
+    > li {
+      cursor: default;
+      color: $headerSecondary_bk;
+    }
+  }
+
+  // TODO: @ovidiu - please refactor
+  &-dropdown {
+    &:before {
+      display: none !important;
+    }
+
+    .btn {
+      min-width: 32px;
+
+      border-color: $icon_color;
+      background-color: transparent;
+
+      &:after {
+        @extend %icon;
+
+        content: '\F234';
+
+        color: $icon_color;
+
+        vertical-align: middle;
+        font-size: 1.4rem;
+        opacity: 0.8;
+      }
+
+      &-group {
+        display: inline-block;
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+
+    .open .dropdown-menu {
+      position: absolute;
+      display: block;
+      top: 100%;
+      left: 0;
+    }
+  }
+}
+
+.bottom-breadcrumbs {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  float: left;
+}
+
+
+

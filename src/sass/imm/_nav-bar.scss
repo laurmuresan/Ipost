@@ -1,0 +1,43 @@
+.navbar {
+
+  .navbar-header{
+    background: $navHeader-bk;
+    border: 1px solid $headerBorder-color;
+    border: 0;
+    float: left;
+    height: 64px;
+
+    .app-sidebar-fixed &{
+
+    }
+
+  }
+
+  .navbar-middle{
+    @extend %clearfix;
+  }
+
+  .navbar-collapse{
+    background: transparent;
+    margin-left: 260px;
+    height: 65px;
+    border-color: $headerBorder-color;
+  }
+
+
+  .navbar-header + .navbar-collapse.left-nav-closed {
+    margin-left: 65px;
+  }
+  span.text-white.top-name {
+   line-height: 60px;
+    vertical-align: middle;
+  }
+
+
+  .logoVector svg#Layer_1 {
+    position: fixed;
+    left: 11px;
+    top: 12px;
+  }
+}
+

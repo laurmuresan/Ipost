@@ -1,0 +1,108 @@
+
+.profile-page{
+
+
+  .profile-details{
+    flex: 3 auto;
+  }
+
+  .profile-data{
+    flex: 6 auto;
+  }
+
+}
+
+
+.profile-details{
+  flex-flow: column;
+}
+
+.user-profile-edit-info, .tabs-content-body{
+  flex: 1 auto;
+}
+
+.profile-details-head{
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  flex: 0 0 auto;
+  padding: $gap;
+
+  @include breakpoint(l){
+    flex-flow: column;
+  }
+
+
+  .profile-details-img{
+    align-items: center;
+    display: flex;
+    flex: 1 auto;
+    justify-content: flex-start;
+    position: relative;
+    padding: 0 0 0 0;
+    width: 0;
+
+    @include breakpoint(l){
+      width: auto;
+    }
+
+    .user-profile-avatar{
+      position: relative;
+
+      .btn{
+        min-width: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      .user-profile-avatar-buttons{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    svg{
+      height: 100% !important;
+      width: 100% !important;
+
+      image{
+        width: 100%;
+      }
+    }
+  }
+
+  .profile-details-name{
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    flex: 1 auto;
+    font-size: 2.2rem;
+    justify-content: center;
+    text-align: center;
+    width: 0;
+
+    h2{
+      word-spacing: 35rem;
+    }
+  }
+}
+
+
+.profile-details-body{
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.profile-details-footer{
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+
+  strong{
+    color: $primary_color;
+    font-weight: bold;
+  }
+}
+
+

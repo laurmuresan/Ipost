@@ -1,0 +1,51 @@
+.widget-email {
+
+  background: url(/static/img/envelope.png) no-repeat 35px 45px $blueMainColor;
+  padding: 0 0 0 135px;
+
+  .panel-body{
+    padding: 25px 15px;
+  }
+
+  .form-group {
+    input[type='text'],
+    select {
+      width: 100%;
+    }
+  }
+  .mail-type-select {
+    .form-group {
+      width: 100%;
+    }
+  }
+
+  .btn-primary{
+    background: $mainBtnColor;
+    border-color: $mainBtnColor;
+    font-size: 17px;
+    line-height: 19px;
+    padding: 8px 30px;
+
+    &:hover{
+      background-color: darken($mainBtnColor,10%) !important;
+      border-color: darken($mainBtnColor,10%);
+    }
+  }
+
+  .box-description{
+    margin: 0 0 5px 0;
+  }
+
+  .box-container{
+      background: transparent;
+      border: 0;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .folder-name-validation div.validation-message span{
+    color: #fff;
+  }
+
+}

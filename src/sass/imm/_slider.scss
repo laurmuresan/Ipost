@@ -1,0 +1,47 @@
+.custom-slider {
+  &,
+  &-wrapper {
+    @include clearfix;
+    width: 100%;
+  }
+
+  &-horizontal {
+    width: 100%;
+    height: 32px;
+  }
+
+  &-handle {
+    width: 32px;
+    height: 32px;
+
+    background-color: #eee;
+
+    color: $white;
+    line-height: 32px;
+    font-weight: bold;
+    text-align: center;
+
+    cursor: pointer;
+    @include border-radius(50%);
+    @include box-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+
+    .active {
+      background-color: $grey;
+    }
+  }
+
+  .bar {
+    position: relative;
+
+    top: 12px;
+    height: 8px;
+
+    background: #ddd;
+    @include border-radius(4px);
+  }
+}
+
+.slider-container {
+  clear: both;
+  height: 200px;
+}

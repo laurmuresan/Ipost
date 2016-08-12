@@ -1,0 +1,212 @@
+#app {
+  & > div {
+    height: 100%;
+  }
+}
+
+#app.left-sidebar-visible {
+  #sidebar {
+    top: 65px !important;
+    -webkit-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+    z-index: 10000;
+  }
+}
+.branding-toggle-hidden {
+  left: 8px;
+}
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainSection{
+  flex:2;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+  .grid-folders-container{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+
+  }
+
+
+}
+
+// TODO: remove extra styles when we'll move everything to `content-wrapper`
+.sidebar {
+  + .wrap-content {
+    height: 100%;
+    margin-left: 260px;
+  }
+
+  &.left-nav-closed {
+    + .wrap-content {
+      margin-left: 65px;
+    }
+  }
+
+  + .content-wrapper, + .mainContent {
+    height: 100%;
+    padding-left: 260px;
+  }
+
+  &.left-nav-closed {
+    + .content-wrapper, + .mainContent {
+      padding-left: 65px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    + .wrap-content,
+    + .content-wrapper, + .mainContent {
+      margin-left: 0;
+    }
+  }
+
+  .sidebar {
+    + .content-wrapper, + .mainContent {
+      padding-left: 0;
+    }
+  }
+}
+
+.content-wrapper {
+  display: table;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+
+  .wrap-contents,
+  .wrap-header {
+    display: table-row;
+    width: 100%;
+
+    .page-title {
+      margin: 0 -15px 20px;
+    }
+  }
+
+  .wrap-header {
+    height: 106px;
+  }
+
+  .wrap-contents-inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+
+    padding: 0 15px 15px 15px;
+  }
+
+  .swMain {
+    display: table-row;
+
+    width: 100%;
+    height: 106px;
+
+    > ul {
+      margin: 0;
+    }
+  }
+
+  .imm-fill-wrapper {
+    height: 100%;
+  }
+}
+
+.wrap-content {
+  & > div {
+    height: 100%;
+  }
+}
+
+.wrap-header {
+  // height: 100%;
+  width: 100%;
+}
+
+.wrap-content-elements {
+  width: 100%;
+  height: calc(100% - 124px);
+}
+
+.wrap-content-elements-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-content-elements-scroll {
+  & > div {
+    height: 100%;
+  }
+
+  height: calc(100% - 30px);
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.wrap-contents {
+  height: 100%;
+  padding-bottom: 15px;
+}
+
+.search-bar .form-group input[type='text'] {
+  width: 100%;
+}
+
+.box-container {
+  min-height: 20px;
+  margin-bottom: 20px;
+  background-color: #ededed;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  left: 283px;
+  top: 82px;
+  width: 506px;
+  z-index: 3;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+.suggestions-dropdown-item:hover {
+  background-color: #007AFF;
+  color: white;
+  cursor: hand;
+}
+
+.header-actions-wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+//.input-icon > [class*="fa-"], .input-icon > [class*="ti-"] {
+//  top: auto;
+//}
+
+.header-table-section {
+  background-color: #E6E8E8;
+  padding: 10px 30px;
+  font-weight: bold;
+  margin: 10px -20px 10px;
+}
+
+.margin-bottom-minus-15 {
+  margin-bottom: -15px;
+}

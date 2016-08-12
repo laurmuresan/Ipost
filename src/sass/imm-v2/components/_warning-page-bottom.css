@@ -1,0 +1,37 @@
+.warning-page-bottom {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  color: #9F9F9F;
+  z-index: 10000;
+  text-align: center;
+}
+
+.icon-yellow{
+  color: orange;
+  height: 3em;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.btn-warning-black-text {
+  background-color: #efa02a;
+  border-color: #efa02a;
+  color: #000;
+  margin-right: 3rem;
+
+  &:hover {
+  background-color: #bf8022;
+  }
+}
+
+.warning-text-container {
+  flex: 1 1 0;
+  padding: 1rem 1rem 1rem 3rem;
+}
+
+

@@ -1,0 +1,175 @@
+.step-content-layout{
+
+  .step-content-RTE{
+    flex: 7 0 auto;
+
+    @include breakpoint(l){
+      flex: 4;
+      width: auto;
+    }
+
+    .step-content-RTE-body{
+      align-items: stretch;
+      display: flex;
+      flex: 1 auto;
+      min-height: 0;
+    }
+
+    .content-dropzone{
+      align-items: stretch;
+      display: flex;
+      flex: 1 auto;
+
+      @include breakpoint(s){
+        min-height: 40rem;
+      }
+
+      > div{
+        align-items: stretch;
+        display: flex;
+        flex: 1 auto;
+
+        > div{
+          align-items: stretch;
+          display: flex;
+          flex: 1 auto;
+        }
+      }
+
+      textarea{
+        background: #f8f8f8;
+        border: 0;
+        align-items: stretch;
+        display: flex;
+        flex: 1 auto;
+        height: auto;
+        margin: 0;
+        padding: 1rem;
+        width: calc(100% - 2rem) !important;
+      }
+    }
+
+
+    .cke_inner{
+      align-items: stretch;
+      display: flex;
+      flex-flow: column;
+      flex: 1 auto;
+    }
+
+    .cke_contents{
+      align-items: stretch;
+      display: flex;
+      flex-flow: column;
+      flex: 1 auto;
+      padding: 1rem;
+
+      iframe{
+        flex: 1 auto;
+      }
+    }
+  }
+
+  .step-content-options{
+    background: #fff;
+    border: 0.1rem solid $form-border-color;
+    display: flex;
+    flex: 2 0 auto;
+    flex-flow: column;
+    min-height: 0;
+    max-width: 30%;
+    transition: width $time;
+    width: 0;
+
+    @include breakpoint(l){
+      flex: 2;
+      width: auto;
+    }
+    @include breakpoint(s){
+      max-width: none;
+    }
+  }
+}
+
+
+#bee-plugin-container{
+  display: flex;
+  flex: 1 auto;
+
+  iframe{
+    flex: 1 auto;
+    height: auto !important;
+  }
+}
+
+
+.content-dropzone-outer{
+  display: flex;
+  flex: 1;
+
+  .content-dropzone-prebuilt-inner {
+    .content-dropzone-inner {
+      & > div{ // remove flex for prebuilt templates
+        display: block;
+      }
+    }
+  }
+
+  .content-dropzone-inner{
+    align-items: stretch;
+    display: flex;
+    flex: 1;
+
+    & > div{ // this is ok on emails but the flex on this div causes issues on prebuilt template content alignment
+      display: flex;
+      flex: 1 auto;
+    }
+
+    & > .spellcheck-textarea{ //without this newlines are lost when spellchecking on plain text
+      display: block;
+    }
+
+    #cke_editor{
+      display: flex;
+      flex: 1 auto;
+    }
+
+    .cke_inner{
+      display: flex;
+      flex: 1 auto;
+      flex-flow: column;
+    }
+
+    #cke_1_contents{
+      display: flex;
+      flex: 1 auto;
+      padding: 1rem;
+
+      textarea{
+        flex: 1 auto;
+        height: auto !important;
+      }
+
+      .cke_wysiwyg_frame{
+        flex: 1 auto;
+        height: auto !important;
+
+      }
+    }
+
+    .cke_top, .cke_bottom{
+      flex: 0 0 auto;
+    }
+
+    textarea{
+      flex: 1;
+      height: auto;
+      margin: -0.1rem;
+    }
+  }
+}
+
+div.cke_dialog_background_cover {
+  z-index: 100 !important;
+}
+

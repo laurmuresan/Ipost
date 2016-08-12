@@ -1,0 +1,88 @@
+// TODO: move into _tree-view.scss and remove the `new`
+//       remove !important(s)
+//       use variables for colors
+//       refactor (if possible)
+.imm-tree-view {
+  &-new {
+    .imm-tree-view {
+      padding-left: 0;
+      list-style: none;
+
+      @include no-select;
+
+      li {
+        &:after {
+          display: none;
+        }
+      }
+
+      li & {
+        padding-left: 0;
+      }
+
+      &-item {
+        display: flex !important;
+
+        &.active {
+          font-weight: 600;
+          background-color: darken(#e2e2e2, 5%);
+        }
+
+        &:hover {
+          background-color: #e2e2e2;
+        }
+      }
+
+      &-expander {
+        position: relative !important;
+        display: inline-block;
+        min-width: 16px;
+        margin-top: 2px;
+        padding: 2px 6px;
+
+        cursor: pointer;
+
+        &.right {
+
+        }
+
+        &.down {
+          transform: rotate(0deg);
+
+          &:hover {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      &-no-icon {
+        cursor:  default !important;
+
+        &:before {
+          display: none !important;
+        }
+      }
+
+      &-label {
+        display: inline-block !important;
+        padding: 6px 10px 6px 22px !important;
+
+        cursor: pointer;
+
+        &:after {
+          position: absolute;
+          top: 8px;
+          left: 4px;
+
+          content: '\F201';
+
+          font-family: 'imm';
+          color: #8b91a0;
+          font-size: 13px;
+
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.header-breadcrumbs {
+  white-space: nowrap;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  & > span {
+    & > span:after {
+      content: '>';
+      margin: 0 5px;
+      vertical-align: middle;
+    }
+
+    & > span:last-child:after {
+      content: '';
+    }
+  }
+}
+
+.truncate {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}

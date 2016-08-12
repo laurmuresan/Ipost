@@ -1,0 +1,96 @@
+
+
+/* COLORS */
+
+// theme colors, greys
+$base-color: #333;
+$primary_color: #1c77bc;
+$secondary_color: #5bb85d;
+$bk-color: #f8f8f8;
+$tabs-bk: #e2e2e2;
+$sectionHeader_bk: $tabs-bk;
+$warning-color: #efa02a;
+$error-color: #ba2f2b;
+$grey_color: #c2c0c6;
+$yellow-color: #ffd400;
+$records-wrapper-BK: #e9ecef;
+
+
+// folder icon color
+$icon_color: #8b91a0;
+
+
+//colors used in the header
+$headerMain_bk: #383b3e;
+$headerSecondary_bk: #424548;
+$headerOptionsHover-bk: #2a2c2d;
+
+//colors used in the left menu
+$leftMenuTitle_bk: #0f1419;
+$leftMenuTitle_color: rgba(255, 255, 255, 0.3);
+$leftMenuIcon_color: rgba(255, 255, 255, 0.6);
+
+
+// color of the borders of different elements
+$menuBorder_color: #4a4e51;
+$form-border-color: #c8c7cc; //$formBorder-color
+$row-hover-bk-color: rgba(0, 0, 0, 0.1);
+
+//background hover color
+$hoverBk-color:  #2d3238;
+
+
+//icon colors
+$icon-border: #cacaca;
+$icon-color: #999999;
+
+//dynamic list icons
+$icon-refresh: #00BFF3;
+$icon-dynamic-add-members: #1F8744;
+$icon-cmm-ipost-lists-icons-count-members: #555555;
+$icon-search: #555555;
+$icon-ipost-clear-icon: #F53D37;
+$icon-deduplicate: #69410A;
+$icon-cmm-ipost-lists-icons-merge: #A02EB0;
+$icon-split: #A0B418;
+$icon-play-circle: #00AABE;
+
+
+// color of the links
+$menu-link-color: rgba(255, 255, 255, 0.4);
+$menu-icon-link-color: rgba(255, 255, 255, 0.9);
+$menu-link-bk-hover-color: #040506;
+
+// color of the folder icons
+$icon-folder-color: #9e9e9e;
+
+
+// headlines background color
+$headline-bk-color: #e6e8e8;
+
+// FORMS
+// input, select
+
+
+// TABLES
+$tr-bk-color: rgba(0, 0, 0, 0.05);
+
+
+// pagination
+$pagination-bk-color: #aeacb4;
+
+/* SPACES */
+
+$headerHeight: 6.4rem;
+$gap: 3rem;
+
+
+$time: 0.5s;
+$legend-node-size: 15px;
+
+$status-complete: #00b955;
+$status-in-progress: #efa02a;
+
+//
+$pause-color: #f19f39;
+$stop-color: #ebebeb;

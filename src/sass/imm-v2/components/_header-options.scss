@@ -1,0 +1,243 @@
+
+.header-options{
+  align-items: center;
+  background: $primary_color;
+  color: #fff;
+  display: flex;
+  font-size: 1.4rem;
+  flex: 0 0 auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-height: 0;
+  padding: $gap/3 $gap;
+
+  &.horizontal-middle{
+    justify-content: center;
+  }
+
+  h2{
+    margin: 0.5rem 0;
+  }
+
+
+  .header-options-body{
+    margin: 0 4rem 0 0;
+    white-space: nowrap;
+    width : 100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &:nth-child(1) {
+      margin-right: 4rem;
+    }
+
+    strong{
+      display: inline-block;
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  .btn-wrappers{
+    background: none;
+    padding: 0;
+    border: 0;
+  }
+
+  .btn{
+    border-color: #fff;
+    padding-bottom: 0.7rem;
+    padding-top: 0.5rem;
+
+    &.btn-green{
+      border-color: $secondary_color;
+    }
+  }
+
+  &.name-wrap {
+    flex-flow: initial;
+    white-space: nowrap;
+
+    h2 {
+      min-width: 0;
+      margin-right: 4rem;
+      display: flex;
+
+      .name-tooltip-hover {
+        display: flex;
+        flex: 1;
+        margin-left: 4rem;
+        min-width: 0;
+        position: relative;
+
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+
+        .header-options-body {
+          margin: 0;
+        }
+
+        span {
+          display: flex;
+
+          strong {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-options{
+  align-items: center;
+  background: $tabs-bk;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  min-height: 0;
+  padding: 1rem $gap;
+
+  .imm-split-layout-center &, .imm-split-layout-west-wrapper &{
+    border-bottom: 0.1rem solid $form-border-color;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .imm-content-wrapper &{
+    padding-right: 1rem;
+  }
+  .header-options-body{
+    white-space: nowrap;
+    max-width : 100%;
+    overflow:hidden;
+    display:inline-block;
+    text-overflow: ellipsis;
+    float: left;
+    line-height: 2;
+  }
+  .test-mailing-header {
+    margin:0 ;
+    white-space: nowrap;
+    min-width: 100%;
+    .tooltip-hover{
+      margin: 0;
+    }
+    div:nth-child(2) {
+      margin-left: 5%;
+    }
+    .tooltip-hover {
+      max-width: 47%;
+      min-width: 12%;
+    }
+  }
+  .btn-wrappers{
+    background: none;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+
+    &.btn-icons-wrappers{
+      align-content: center;
+      align-items: center;
+      display: flex;
+
+      .btn-toolbar{
+        margin: 0 0.5rem 0 0;
+        min-width: 225px;
+      }
+
+      .icon-all {
+
+        span {
+          position: relative;
+          top: -0.3rem;
+          left: -0.1rem;
+        }
+
+        &.btn-active,
+        &:hover {
+          background: $secondary_color;
+          color: #fff;
+        }
+      }
+
+      .icon-process {
+
+        &.btn-active,
+        &:hover {
+          color: $yellow-color;
+        }
+      }
+
+      .icon-journey {
+
+        &.btn-active,
+        &:hover {
+          color: $primary_color;
+        }
+      }
+
+      .btns-separator {
+        border-left: 0;
+        padding: 0 0 0 1rem;
+        position: relative;
+
+        &:after{
+          border: 0.1rem solid $form-border-color;
+          border-top-color: transparent;
+          background: $bk-color;
+          content: '';
+          display: inline-block;
+          height: calc(100% + 2rem);
+          left: 0;
+          position: absolute;
+          top: -1rem;
+          width: 0.6rem;
+
+          .imm-content-wrapper &{
+            height: calc(100% + 4.4rem);
+            top: -2.2rem;
+          }
+        }
+
+        .btn-icon{
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .btns-separator{
+    border-left: 0.1rem solid $form-border-color;
+    padding: 0 0 0 1rem;
+    .btn.btn-white{
+      min-width: 12rem;
+      padding: 0.6rem 0rem;
+    }
+  }
+
+  .btn{
+    margin: 0 1rem 0 0;
+    padding-bottom: 0.7rem;
+    padding-top: 0.5rem;
+    text-align: center;
+
+    &.btn-green{
+      border-color: $secondary_color;
+    }
+  }
+  .styled-width{
+    .btn{
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+}

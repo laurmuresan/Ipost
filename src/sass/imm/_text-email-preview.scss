@@ -1,0 +1,68 @@
+.preview-container {
+  font-family: "Raleway", sans-serif;
+  height: calc(100% - 145px);
+
+  & > .well {
+    min-height: calc(100% - 100px);
+    padding: 10px 30px;
+  }
+
+  .email-title-section {
+
+    span:first-child {
+      margin-top: 10px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+
+  .preview-wrapper {
+
+    .screen {
+      white-space: pre-wrap;
+      text-align: justify;
+      word-wrap: break-word;
+      padding-left: 10px;
+    }
+
+    .preview-inner {
+      margin: 20px auto;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .preview-inner-desktop-auto {
+      width: auto;
+    }
+
+    .preview-inner-desktop-1024 {
+      width: 1024px;
+    }
+
+    .preview-inner-desktop-768 {
+      width: 768px;
+    }
+
+    .preview-inner-desktop-480 {
+      width: 480px;
+    }
+
+    .preview-inner-mobile-auto {
+      width: 500px;
+      min-height: 612px;
+      border: 2px solid #e3e3e3;
+      border-radius: 10px;
+    }
+
+  }
+  .preview-mid-btns-container .btn-toolbar {
+    display: inline-block;
+  }
+
+  @media (max-width: 767px) {
+    .preview-mid-btns-container {
+      text-align: right !important;
+    }
+  }
+}

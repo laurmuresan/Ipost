@@ -1,0 +1,33 @@
+.d-table {
+  display: table !important;
+  width: 100%;
+}
+.d-table-row {
+  display: table-row !important;
+  width: 100%;
+  vertical-align: middle;
+}
+.d-table-cell {
+  display: table-cell !important;
+  vertical-align: middle;
+}
+.div-child-right > div {
+  float: right;
+}
+.all-width {
+  width: 100%;
+}
+.fixed-cells {
+  max-width: 840px;
+  .d-table-cell {
+    width: 33%;
+  }
+}
+.four-cells {
+  .fixed-cells {
+    max-width: 1000px;
+    .d-table-cell {
+      width: 25%;
+    }
+  }
+}

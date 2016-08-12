@@ -1,0 +1,577 @@
+.audience-selection-wrapper {
+  .form-row {
+    label {
+      &:after {
+        content: '';
+      }
+    }
+    .validation-message {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.content-layout-wrapper.layout-v2.automation-layout {
+  border:1px #c8c7cc solid;
+  background-color: #ffffff;
+  .content-layout-header-l-col{
+    color: #0078c0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .tabs-vertical-wrapper{
+    max-height: 50rem;
+    .automation-menu{
+      p{
+        border-top: 0.1rem solid #c8c7cc;
+        padding-top: 2rem;
+      }
+      .border-top{
+        border-top: 0.1rem solid #c8c7cc;
+        padding-bottom: 2rem;
+      }
+      .blue-text{
+        margin-bottom: 2rem;
+      }
+      .left-space{
+        padding-left: 2rem;
+        padding-top: 2rem;
+      }
+      .custom-design-select{
+        padding-left: 2rem;
+      }
+    }
+  }
+  .content-layout-r-body {
+    flex-direction: column;
+    overflow: hidden;
+    .drag-drop-attributes {
+      flex: 1 auto;
+      text-align: -webkit-center;
+      color: #e2e2e2;
+      .icon-drag-and-drop-icontext-activities {
+        font-size: 28rem;
+        display: flex;
+      }
+    }
+    .activity-icon-container {
+
+      .icon.icon-animation-effect {
+        transition: all 1s ease-in;
+      }
+      .hide-content li,{
+        visibility: hidden;
+        transition-delay: 0.3s;
+        font-size: 1rem;
+        a{
+          color: #1c77bc;
+          font-weight: bold;
+          padding: 0.5rem;
+          font-size: 1rem;
+          display: block;
+        }
+      }
+    }
+    .activity-icon-container:hover{
+        width: 10em;
+        height: 12rem;
+        border: 1px solid #1c77bc;
+      .icon.icon-animation-effect{
+        font-size: 3.5rem;
+        top: -3.5rem;
+        position: relative;
+      }
+      .subtask-options{
+        .btn-icon.icon-pencil.rounded{
+          position: relative;
+          top: 1rem;
+          left: -3.5rem;
+        }
+        .btn-icon.icon-trash.rounded{
+          position: relative;
+          top: 1rem;
+          right: -3.5rem;
+        }
+      }
+      .hide-content,.hide-content-name{
+       visibility: visible;
+
+       i.icon.icon-imm {
+         transform: rotate(180deg);
+       }
+        &:hover li{
+          visibility: visible;
+          a{
+
+            &:hover{
+              background-color: #ebebeb;
+            }
+          }
+        }
+      }
+      .hide-content li :nth-child(1){
+        border-radius:0.3rem 0.3rem 0 0;
+      }
+      .hide-content li :last-child{
+        border-radius:0 0 0.3rem 0.3rem ;
+      }
+
+    }
+
+    .email-icon-activity {
+      font-size: 4rem;
+      color: #1c75bc;
+    }
+    .success-bar {
+      width: 21rem;
+      height: 1rem;
+      min-height: 0;
+      background-color: #eee;
+      border-radius: 2px;
+      box-shadow: 0 11px 5px #5bb85d inset;
+    }
+    .error-bar {
+      @extend .success-bar;
+      box-shadow: 0 11px 5px #ba2f2b inset;
+    }
+    .status-name {
+      text-transform: capitalize;
+      font-style: normal;
+    }
+    .restart-action a {
+      font-size: 12px;
+      cursor: pointer;
+    }
+    td, th {
+      vertical-align: middle;
+    }
+    td {
+      text-transform: capitalize;
+    }
+    .options-list-wrapper label {
+      display: inline-block;
+      margin: 0 1rem 0 0;
+      min-width: 13rem;
+      min-height: 0;
+      width: auto;
+    }
+
+  }
+  .content-layout-l.activity {
+
+    h3 {
+      border-top: 0.1rem solid #f2f2f2;
+      background: none;
+      font-weight: bold;
+      margin: 0;
+      padding: 2rem 0 1rem;
+      text-align: left;
+    }
+
+    .tabs-vertical-wrapper {
+      padding: 1rem 1rem 1rem 1rem;
+    }
+  }
+  .drop-down-actions {
+    i.icon.icon-imm {
+      position: relative;
+      right: -1.6rem;
+      font-size: 0.7rem;
+    }
+    ul {
+      li {
+        background-color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.drag-drop-attributes{
+  align-items: center;
+  display: flex;
+  flex: 1 auto;
+  justify-content: center;
+  min-height: 15rem;
+
+  .icon-ipost-drag-and-drop-attributes {
+    color: $tabs-bk;
+    display: flex;
+    font-size: 28rem;
+  }
+}
+
+.blue-text{
+  color: #0078c0;
+}
+.hide-content{
+  visibility: hidden;
+  position: absolute;
+  height: 3rem;
+  width: 14rem;
+  left: -1px;
+  bottom: 0;
+  text-align: center;
+  background-color: #1c77bc;
+  padding: 0.3rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+.hide-content-name,input.hide-content-name{
+  visibility: hidden;
+  position: absolute;
+  height: 2.5rem;
+  width: 76%;
+  bottom: 3rem;
+  color: #1c77bc;
+  padding: 0.3rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.2rem !important;
+  border: 1px solid #c8c7cc;
+  left: 16px;
+}
+.no-border{
+  border: none;
+  color: black;
+}
+.hide-content li.delay-effect{
+  visibility: hidden;
+  width: inherit;
+  background-color: #1c77bc;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.3rem;
+  position: absolute;
+  z-index: 1;
+  left: 0%;
+  bottom: -5.8rem;
+  text-align: left;
+  border: 0.1rem solid #c8c7cc;
+  width: 100%;
+}
+.hide-content li.delay-effect::before{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 88%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #c8c7cc transparent;
+}
+.hide-content li.delay-effect::after{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 88%;
+  margin-left: -3px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent transparent #FFFFFF transparent;
+
+}
+.table-form .th.bold-text{
+  font-weight: bold;
+}
+
+//start automation shedule style
+.automation-schedule{
+    .step-properties-form.content-layout{
+      border: 0.1rem solid #c8c7cc;
+      margin: 0;
+      .body-options {
+        text-align: center;
+        padding: 26rem 25% 30rem 36%;
+        margin-left: 0rem;
+        h2{
+          h2 {
+            padding-bottom: 2rem;
+          }
+        }
+      }
+      .content-layout-l {
+        border: none;
+        flex: 4 0 auto;
+        padding-left: 1.7rem;
+        padding-top: 2.8rem;
+        .schedule-days-list > span {
+          margin: 0;
+          border-right: 0.1rem solid #c8c7cc;
+          border-top: 0.1rem solid #c8c7cc;
+          border-bottom: 0.1rem solid #c8c7cc;
+          background-color: #1c77bc;
+          color: #ffffff;
+          padding: 0.5rem 1.84rem;
+        }
+        .schedule-days-list > span.active {
+          background-color: #ffffff;
+          color: #1c77bc ;
+        }
+        .schedule-days-list :nth-child(1)  {
+          border-left: 0.1rem solid #c8c7cc;
+          border-radius: 0.4rem 0 0 0.4rem;
+        }
+        .schedule-days-list :last-child  {
+          border-radius: 0 0.4rem 0.4rem 0;
+        }
+      }
+      .content-layout-r{
+        border: none;
+      }
+      .step-properties-form-content {
+        .body-options{
+          padding: 0 2rem 2rem 0;
+          text-align: center;
+          width: 100%;
+          padding-top: 10rem;
+          h2{
+            padding: 2rem;
+          }
+        }
+      }
+    }
+    .step-properties-preview.content-layout-r{
+      padding-top: 2.8rem;
+    .step-properties-preview-info{
+      margin: 0;
+      text-transform: capitalize;
+      p:nth-child(1){
+        font-weight: bold;
+        padding: 0 2rem 2rem 0;
+        margin: 0;
+
+      }
+      p strong{
+        padding-left: 1rem;
+      }
+      span{
+        padding-right: 0.4rem;
+      }
+      .Select-arrow{
+        padding: 0;
+      }
+    }
+  }
+}
+
+.automation-activity{
+  .content-layout-header{
+    background-color: #e2e2e2;
+    padding: 1rem 3rem;
+    label{
+      margin-right: 2rem;
+      top: 0.7rem;
+      position: relative;
+    }
+    .content-layout-header-l-row{
+      display: flex;
+      margin-right: 4rem;
+    }
+    .content-layout-header-r-row{
+      display: flex;
+    }
+  }
+  .content-layout-wrapper.layout-v2{
+    background: #ffffff;
+    border: 0.1rem solid #c8c7cc;
+    margin: 2.04rem 2rem;
+    > .content-layout-r-head.automation-r-col{
+      h3{
+        margin: 1.9rem 0 1.3rem 2.07rem;
+        font-weight: bold;
+      }
+    }
+    .content-layout-r-body.table-row{
+      flex-direction: column;
+      tr{
+        th{
+          vertical-align: middle;
+      }
+    }
+    .text-style{
+        padding-left: 1rem;
+        font-weight: normal;
+        line-height: 3rem;
+        span{
+          font-weight: bold;
+        }
+      }
+     label a{
+        font-weight: normal;
+      }
+    }
+    .activity-log-icon-container{
+      padding: 0.8rem 3rem 0.8rem 3rem;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      font-weight: normal;
+
+      .text-center{
+        div{
+          color: #1c77bc;
+          width:11.6rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      i.email-icon-activity.icon-email-filled{
+        color: #1c75bc;
+        font-size: 2.6rem;
+      }
+    }
+    .success-bar,.error-bar{
+      border: 0.1rem solid #5cb85c;
+      padding: 0.8rem 1rem 0.8rem 1rem;
+      position: relative;
+      height: 11.6rem;
+    }
+    .error-bar{
+      border: 0.1rem solid #f53d37;
+      padding: 3rem 1rem 1rem 1rem;
+      box-sizing: border-box;
+      .icon-times{
+        color: #f53d37;
+
+      }
+    }
+  }
+  .success-text,.icon-checked{
+    color:#5cb85c;
+    text-transform: capitalize;
+  }
+  .icon.icon-checked,.icon.icon-times{
+    display: none;
+    text-transform: capitalize;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+  }
+    .success-text .icon.icon-checked,.success-bar .icon.icon-checked,.error-text .icon.icon-times,.error-bar .icon.icon-times{
+    display: inline-block;
+  }
+  .error-text{
+    color:#f53d37;
+    text-transform: capitalize;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+  }
+  .activity-log-icon-container{
+    .icon-checked,.icon-times{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1rem;
+    }
+  }
+  .restart-action{
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+}
+
+//automation journey
+.automation-journey{
+  .content-layout-r-head.automation-r-col{
+    h3{
+      strong{
+        color: #00000c;
+        padding-left: 1em;
+      }
+    }
+  }
+}
+.automation-subtype-area{
+  width: 100%;
+  display: flex;
+  flex: 1;
+    .entry-event-wrapper{
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      .automation-subtype-list{
+        align-content: stretch;
+        overflow: hidden;
+        flex: 1;
+        .activity-icon-container-left{
+          flex: 1;
+          max-width:14.0em;
+          background-color: #f8f8f8;
+          margin: 0;
+          width: 12em;
+          padding: 1em;
+          text-align: center;
+          .subtask-icon{
+            max-width:12.1em;
+            border: 0.01em solid black;
+            padding-bottom: 2em;
+            font-size: inherit;
+            margin-top: 1em;
+            i{
+              display: block;
+              font-size: 27.5px;
+              color: #333333;
+              line-height: 3.5;
+            }
+              span{
+              font-size: 1.2em;
+              line-height: 2.2;
+            }
+          }
+        }
+        .activity-icon-container{
+          align-self: flex-start;
+          margin-top: 4.6em;
+          &:hover{
+            margin-top: 4.6em;
+          }
+        }
+      }
+    }
+  .on-demand-section{
+    background-color: #f8f8f8;
+    padding:3.1rem 1rem 0 1rem;
+    margin: 0;
+    text-align: center;
+      .on-demand-style {
+        width:12rem;
+        height: 12rem;
+        border: 1px solid #333333;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 11px;
+        i.icon.icon-ipost-entry-icon {
+          font-size: 3rem;
+          display: block;
+          padding-top: 3rem;
+          margin-bottom: -1rem;
+        }
+      }
+
+    }
+    .exit-icon-journey{
+      margin: 0;
+      width: auto;
+      .icon.icon-ipost-exit-icon{
+        font-size: 3rem;
+        margin-bottom: -1rem;
+        padding-top: 10rem;
+        display: block;
+      }
+    }
+  }
+.activity-icon-container + .drag-drop-attributes {
+  visibility: hidden;
+}
+
+h3.schedule-status {
+  color: #0078c0;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  top: 7px;
+  left: 18px;
+}

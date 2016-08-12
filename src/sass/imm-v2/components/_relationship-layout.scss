@@ -1,0 +1,208 @@
+
+
+.relationship-layout{
+  display: flex;
+  flex-flow: column;
+  margin: 2rem 0;
+  width: 100%;
+
+  .relationship-layout-row-header{
+    padding: 1rem 0;
+    text-align: center;
+
+    .relationship-layout-col-span2-icon{
+      border: 0;
+    }
+  }
+
+  &-row-wrapper{
+    display: flex;
+    flex: 1 auto;
+    flex-flow: row;
+  }
+
+  &-row2-wrapper{
+    display: flex;
+    flex: 1 auto;
+    flex-flow: column;
+    margin: 0 0 3rem 0;
+  }
+
+  &-col-span2-relation{
+    align-items: center;
+    display: flex;
+    flex: 0 0 3rem;
+    flex-flow: column;
+    justify-content: flex-start;
+
+    .relationship-graph{
+      background: $primary_color;
+      flex: 1 0;
+      max-height: 50%;
+      margin: 1.8rem 0;
+      padding: 0;
+      position: relative;
+      width: 0.1rem;
+
+      &.relationship-graph-text{
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      &:before, &:after{
+        background: $primary_color;
+        content: '';
+        display: inline-block;
+        height: 0.1rem;
+        position: absolute;
+        width: 1rem;
+      }
+
+      &:before{
+        top: 0;
+      }
+
+      &:after{
+        bottom: 0;
+      }
+    }
+  }
+
+  &-col-span2-icon{
+    align-items: stretch;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $form-border-color;
+    display: flex;
+    flex: 0 0 5rem;
+
+    i{
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+
+      &:before{
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  &-row-wrapper{
+    display: flex;
+    flex-flow: row;
+    flex: 1;
+    margin: 0 0 2rem 0;
+  }
+
+  &-row{
+    display: flex;
+    flex: 1 auto;
+    flex-flow: column;
+
+    &-content{
+      display: flex;
+      flex: 1 auto;
+      flex-flow: row;
+      flex-wrap: nowrap;
+
+      &-col{
+        flex: 1 50%;
+        padding: 0 1rem 0 0;
+
+        select{
+          width: 100%;
+        }
+      }
+
+      &.text-center {
+        padding: 0 5rem 0.5rem 3rem;
+      }
+    }
+  }
+
+  &-row-name{
+    display: block;
+
+    .relationship-label{
+      display: inline-block;
+      margin: 0 2rem 0 0;
+    }
+
+    .form-group{
+      display: inline-block;
+      margin: 0 4rem 0 0;
+
+      input[type='text']{
+        display: inline-block;;
+        max-width: 80%;
+        width: 50rem;
+
+        @include breakpoint(l){
+          max-width: 50%;
+          width: 30rem;
+        }
+
+        @include breakpoint(m){
+          max-width: none;
+          width: auto;
+        }
+      }
+    }
+
+    div{
+       display: inline-block;
+     }
+  }
+
+  .Select{
+    display: block;
+  }
+
+  .custom-select{
+    .Select{
+      display: block;
+    }
+  }
+
+  .custom-select-disabled {
+    .Select-arrow-zone {
+      display: none;
+    }
+  }
+
+  .relates-to-line{
+    color: $primary_color;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+    padding: 0.3rem 0;
+  }
+
+  &-info{
+    margin: 0;
+  }
+}
+
+.relationships-text{
+  padding: 0 0 0 2.5rem;
+  position: relative;
+
+  &:before{
+    @extend %icon;
+    display: inline-block;
+    font-size: 2rem;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+}
+
+.relationships-name{
+
+  strong{
+    color: $primary_color;
+  }
+}

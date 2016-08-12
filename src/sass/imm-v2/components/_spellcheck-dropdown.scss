@@ -1,0 +1,62 @@
+
+.spellcheck-textarea{
+  border: 0.1rem solid $warning-color;
+  margin: 2rem;
+  padding: 1rem;
+  width: 100%;
+  overflow: auto;
+
+  textarea{
+  }
+}
+
+.content-dropzone{
+  margin: -0.1rem;
+  border: 0.1rem solid transparent;
+}
+
+
+.spellcheck-dropdown{
+  position: relative;
+  color: $error-color;
+
+  div{
+    display: inline-block;
+  }
+
+  span{
+    class: $error-color;
+  }
+
+  .dropdown-ul{
+    background: #fff;
+    border: 0.1rem solid $form-border-color;
+    font-size: 1.2rem;
+    left: 0;
+    max-height: 20rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 2rem !important;
+    white-space: nowrap;
+    z-index: 2;
+
+    li{
+      cursor: pointer;
+      min-width: 10rem;
+      padding: 0.2rem 1rem;
+
+      &:hover{
+        background: #ebebeb;
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+.regexstyles h3{
+  color: #1c77bc;
+}
+
+.regexstyles h4{
+  margin-top: 40px;
+  color: #1c77bc;
+}
+
+.regexstyles p{
+   text-indent: 30px;
+ }
+
+.regexstyles p dl{
+
+}
+
+.regexstyles dl {
+  border: 3px double #ccc;
+  padding: 0.5em;
+}
+.regexstyles dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: green;
+}
+.regexstyles dt:after {
+  content: ":";
+}
+.regexstyles dd {
+  margin: 0 0 0 110px;
+  padding: 0 0 0.5em 0;
+}
+
+
+.regexstyles ol li{
+  margin-top: 30px;
+}
+.regexstyles ol li dl{
+  margin-top: 20px;
+}
+.regexstyles ol li span.example{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-indent: 0px;
+  color: red;
+  display: block;
+}
+
+.regexstyles ol li dt {
+  float: left;
+  clear: left;
+  width: 150px;
+  text-align: right;
+  font-weight: bold;
+  color: green;
+}
+
+.regexstyles ol li dd{
+  margin: 0 0 0 160px;
+  padding: 0 0 0.5em 0;
+}

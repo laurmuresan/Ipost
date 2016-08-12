@@ -1,0 +1,457 @@
+
+
+html, body{
+  background: $bk-color;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#root{
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+}
+
+#app-wrapper, #app{
+  display: flex;
+  flex-flow: row;
+  flex: 1 auto;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+}
+
+
+#contentSection{
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+
+  #mainContent{
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+
+    @include breakpoint(m){
+      overflow-y: auto;
+    }
+
+    .content-section{
+      display: flex;
+      flex-flow: column;
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+    }
+     .content{
+          display: flex;
+          flex-flow: column;
+          flex: 1;
+          min-height: 0;
+          height: 100%;
+        }
+    @-moz-document url-prefix() {
+      .content-section{
+        height: 100%;
+        max-height: 100%;
+      }
+      .content.firefox-style{
+        display: block;
+      }
+      .content.automation.firefox-style{
+        max-height: 77%;
+      }
+      .reports.firefox-style{
+        max-height: 83%;
+      }
+      .filters.firefox-style{
+        max-height: 75%;
+      }
+    }
+    .contentWrapper, .content-wrapper, .content-wrapper-border{
+      display: flex;
+      flex-flow: column;
+      flex: 1 auto;
+      min-height: 0;
+      margin: 0 0 2rem 0;
+    }
+
+    .content-wrapper-border{
+      border: 0.1rem solid $form-border-color;
+      background: #fff;
+      margin: 2rem 2rem 0 2rem;
+      padding: 1rem;
+
+      &.export-templates {
+        padding: 2rem;
+
+        .input-with-icon {
+          width: 40rem;
+        }
+
+        .delimiter-input {
+          max-width: 19rem;
+        }
+      }
+
+      .content-wrapper {
+        margin-bottom: 0;
+      }
+    }
+
+    .content-page-wrapper{
+      background: #fff;
+      display: flex;
+      margin: 2rem;
+      flex: 1 auto;
+      min-height: 0;
+      border: 0.1rem solid $form-border-color;
+    }
+  }
+
+  .stats-container {
+    .card {
+      border: none;
+    }
+  }
+
+}
+
+
+.content-body{
+  padding: $gap $gap 0;
+
+  .content-wrapper-border &{
+    padding: 0 0 $gap;
+  }
+}
+
+
+.content-layout-wrapper{
+  display: flex;
+  flex: 1 auto;
+  flex-flow: row;
+  min-height: 0;
+  padding: $gap/2 $gap 0;
+
+  &.layout-v2{
+    background: $tabs-bk;
+    flex-flow: column;
+    margin: 1rem 2rem;
+    padding: 1rem;
+  }
+
+  @include breakpoint(s){
+    display: block
+  }
+
+}
+
+.content-layout-header{
+  display: flex;
+  flex-shrink: 0;
+  padding: 0 0 1rem 0;
+  min-height: 0;
+
+  .content-layout-header-l-col{
+    max-width: 25%;
+    width: 25%;
+  }
+}
+
+.content-layout-footer{
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0 0 0 0;
+  min-height: 0;
+  position: relative;
+  z-index: 2;
+
+  .layout-v2 &{
+    background: $tabs-bk;
+  }
+
+  .btn-wrappers{
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+}
+
+.content-layout-footer-data{
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column;
+  position: relative;
+  z-index: 2;
+
+  .layout-v2 &{
+    background: $tabs-bk;
+  }
+
+  h4{
+    border-bottom: 0.1rem solid $form-border-color;
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
+
+    strong{
+      color: $primary_color;
+    }
+  }
+
+  .content-layout-footer-data-body{
+    border: 0.1rem solid $form-border-color;
+    background: #fff;
+    flex: 1 auto;
+    max-height: 13rem;
+
+    th, td{
+      &:first-child{
+        padding-left: 1rem;
+      }
+    }
+  }
+
+}
+
+.content-layout-wrapper2{
+  display: flex;
+  flex: 1 auto;
+  min-height: 0;
+}
+
+.content-layout{
+  display: flex;
+  flex-flow: row;
+  flex: 1 auto;
+  min-height: 0;
+
+  .content-layout-wrapper2 &{
+    padding: $gap $gap 0 $gap;
+
+    .tab-horizontal-body &{
+      padding: 0;
+    }
+  }
+
+  @include breakpoint(s){
+    flex-flow: column;
+  }
+
+
+  &-l{
+    background: #fff;
+    border: 0.1rem solid $form-border-color;
+    display: flex;
+    flex: 1 0 auto;
+    min-height: 0;
+    margin: 0 1rem 0 0;
+    transition: width $time;
+    width: 0;
+
+    .content-l-body{
+      display: flex;
+      flex: 1 auto;
+      flex-flow: column;
+      width: 100%;
+    }
+
+    .layout-v2 &{
+      border: 0.1rem solid $form-border-color;
+      flex-flow: column;
+    }
+
+    @include breakpoint(s){
+      margin-bottom: $gap;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &-r{
+    background: #fff;
+    border: 0.1rem solid $form-border-color;
+    display: flex;
+    flex: 3 0 auto;
+    flex-flow: column;
+    min-height: 0;
+    transition: width $time;
+    width: 0;
+
+    .layout-v2 &{
+      border: 0.1rem solid $form-border-color;
+      flex-flow: column;
+      flex: 3 0 auto;
+
+      .content-layout-r-body{
+      }
+    }
+
+    @include breakpoint(s){
+      margin-bottom: $gap;
+      width: 100%;
+    }
+
+    .content-layout-r-head{
+      align-items: center;
+      border-bottom: 0.1rem solid $form-border-color;
+      flex-flow: row;
+      justify-content: space-between;
+      display: flex;
+      flex-shrink: 0;
+      margin: 1rem 1rem 0 1rem;
+      padding: 0 0 1rem 0;
+
+      &.automation-r-col{
+        justify-content: flex-start;
+      }
+
+      .btn-wrappers{
+        padding: 0 0 0 0;
+      }
+
+    }
+
+    &-body{
+      display: flex;
+      flex: 1 auto;
+      overflow: auto;
+      padding: 1rem;
+
+    }
+
+  }
+
+}
+
+
+.layout-4cols{
+  display: flex;
+  flex-flow: row wrap;
+
+  > *{
+    margin: 0 2rem 1rem 0;
+    max-width: 22%;
+    width: 100%;
+
+    @include breakpoint(m){
+      max-width: 33.333%;
+    }
+
+    @include breakpoint(s){
+      max-width: 50%;
+    }
+  }
+
+  label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 0 0 2rem;
+    position: relative;
+
+    input[type='checkbox'],input[type='radio']{
+      left: 0;
+      position: absolute;
+      top: 0.4rem;
+    }
+  }
+}
+
+.layout-2cols{
+  display: flex;
+  flex-flow: row wrap;
+
+  > *{
+    margin: 0 0 1rem 0;
+    max-width: 50%;
+    width: 100%;
+
+    @include breakpoint(s){
+      max-width: 100%;
+    }
+  }
+
+  label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 0 0 2rem;
+    position: relative;
+
+    input[type='checkbox'],input[type='radio']{
+      left: 0;
+      position: absolute;
+      top: 0.4rem;
+    }
+  }
+}
+
+.scrollable {
+  overflow: auto;
+}
+
+.scrollable-x {
+  padding-bottom: $gap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.scrollable-y {
+  padding-bottom: $gap;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrollable-y-no-padding {
+  padding: 0;
+}
+
+/*
+
+.content-layout-wrapper{
+  background: $tabs-bk;
+  display: flex;
+  flex: 1 auto;
+  flex-flow: column;
+  margin: 1rem 2rem;
+  min-height: 0;
+}
+
+.content-layout-header{
+  display: flex;
+  padding: 0 0 1rem 0;
+  min-height: 0;
+}
+
+.content-layout-content{
+  display: flex;
+  flex: 1;
+  flex-flow: row;
+  min-height: 0;
+
+  .content-layout-l-col{
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    min-height: 0;
+    width: 0;
+
+    .content-l-body{
+      flex: 1 auto''
+    }
+  }
+
+  .content-layout-r-col{
+    display: flex;
+    flex: 3;
+    width: 0;
+  }
+}
+
+*/

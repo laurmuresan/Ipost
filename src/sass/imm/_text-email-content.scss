@@ -1,0 +1,144 @@
+.create-plain-text-email-content-wrapper {
+  font-family: "Raleway", sans-serif;
+  height: calc(100% - 135px);
+
+  &.has-preview-query {
+    height: calc(100% - 235px);
+  }
+
+  .top-email {
+    height: calc(100% - 70px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #e6e8e8;
+
+    .text-section {
+      height: 100%;
+
+      .text-input {
+        height: 100%;
+      }
+    }
+    & > div:last-child {
+      height: calc(100% - 90px);
+    }
+  }
+
+  .content-dropzone {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-textarea {
+    background: url('/static/img/drag-and-drop.png') no-repeat center;
+  }
+
+  textarea, .spellcheck-textarea {
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow-y: auto;
+  }
+
+  .email-title-section {
+
+    span:first-child {
+      margin-right: 5px;
+      display: inline-block;
+    }
+  }
+
+  .content-to-preview {
+    min-height: 300px;
+  }
+
+  fieldset {
+    margin: 20px 0 0 0;
+    height: 100%;
+    &.content {
+      background-color: #F8F8F8;
+    }
+  }
+  .options-section {
+    height: 100%;
+    top: 19px;
+    & > div {
+      height: 100%;
+    }
+    .tab-headers {
+      border: 1px solid #E6E8E8;
+      border-bottom: none;
+      overflow: hidden;
+
+      .tab-header {
+        text-align: center;
+        background-color: #D6D9DC;
+        color: #93989A;
+        padding: 14px 10px;
+        font-size: 12px;
+        line-height: 22px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        .fa {
+          font-size: 20px;
+        }
+
+        &:hover {
+          background-color: #c0c5c9;
+          color: #505659;
+        }
+        &.is-tab-selected, &.is-tab-selected:hover {
+          background-color: #F9F9F9;
+          color: #516167;
+        }
+
+      }
+    }
+
+    .tab-content {
+      background-color: #F9F9F9;
+      border: 1px solid #E6E8E8;
+      border-top: none;
+      height: calc(100% - 41px);
+      overflow-y: auto;
+      padding: 20px 20px 20px 20px;
+      margin-bottom: 30px;
+
+      .personalize-tag {
+        display: inline-block;
+        margin: 5px;
+        padding: 5px;
+        background-color: #F6F5F5;
+        border: 1px solid #E6E8E8;
+        cursor: pointer;
+      }
+
+      .heading-title {
+        border-bottom: 1px solid #E6E8E8;
+        padding: 0 0 5px 0;
+      }
+
+      .heading-paragraph {
+        font-size: 12px;
+        padding: 5px 0 5px 0;
+      }
+    }
+  }
+  .bottom-buttons {
+    > div {
+      display: inline-block;
+
+      &.right-buttons {
+        float: right;
+
+        button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
